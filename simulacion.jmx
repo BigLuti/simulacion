@@ -1,0 +1,1454 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.5">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="simulacion" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="carga " enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">10</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">&lt;!DOCTYPE html&gt;&#xd;
+&lt;!--[if IE]&gt;&lt;![endif]--&gt;&#xd;
+&lt;!--[if IE 8 ]&gt;&lt;html dir=&quot;ltr&quot; lang=&quot;en&quot; class=&quot;ie8&quot;&gt;&lt;![endif]--&gt;&#xd;
+&lt;!--[if IE 9 ]&gt;&lt;html dir=&quot;ltr&quot; lang=&quot;en&quot; class=&quot;ie9&quot;&gt;&lt;![endif]--&gt;&#xd;
+&lt;!--[if (gt IE 9)|!(IE)]&gt;&lt;!--&gt;&#xd;
+&lt;html dir=&quot;ltr&quot; lang=&quot;en&quot;&gt;&#xd;
+&lt;!--&lt;![endif]--&gt;&#xd;
+&lt;head&gt;&#xd;
+&lt;meta charset=&quot;UTF-8&quot;/&gt;&#xd;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;&#xd;
+&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;&#xd;
+&lt;title&gt;Your Store&lt;/title&gt;&#xd;
+&lt;base href=&quot;https://opencart.abstracta.us:443/&quot;/&gt;&#xd;
+&lt;meta name=&quot;description&quot; content=&quot;My Store&quot;/&gt;&#xd;
+&lt;script src=&quot;catalog/view/javascript/jquery/jquery-2.1.1.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;&#xd;
+&lt;link href=&quot;catalog/view/javascript/bootstrap/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; media=&quot;screen&quot;/&gt;&#xd;
+&lt;script src=&quot;catalog/view/javascript/bootstrap/js/bootstrap.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;&#xd;
+&lt;link href=&quot;catalog/view/javascript/font-awesome/css/font-awesome.min.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;/&gt;&#xd;
+&lt;link href=&quot;//fonts.googleapis.com/css?family=Open+Sans:400,400i,300,700&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;/&gt;&#xd;
+&lt;link href=&quot;catalog/view/theme/default/stylesheet/stylesheet.css&quot; rel=&quot;stylesheet&quot;&gt;&#xd;
+&lt;link href=&quot;catalog/view/javascript/jquery/swiper/css/swiper.min.css&quot; type=&quot;text/css&quot; rel=&quot;stylesheet&quot; media=&quot;screen&quot;/&gt;&#xd;
+&lt;link href=&quot;catalog/view/javascript/jquery/swiper/css/opencart.css&quot; type=&quot;text/css&quot; rel=&quot;stylesheet&quot; media=&quot;screen&quot;/&gt;&#xd;
+&lt;script src=&quot;catalog/view/javascript/jquery/swiper/js/swiper.jquery.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;&#xd;
+&lt;script src=&quot;catalog/view/javascript/common.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;&#xd;
+&lt;link href=&quot;https://opencart.abstracta.us:443/image/catalog/cart.png&quot; rel=&quot;icon&quot;/&gt;&#xd;
+&lt;/head&gt;&#xd;
+&lt;body&gt;&#xd;
+&lt;nav id=&quot;top&quot;&gt;&#xd;
+  &lt;div class=&quot;container&quot;&gt;&lt;div class=&quot;pull-left&quot;&gt;&#xd;
+  &lt;form action=&quot;https://opencart.abstracta.us:443/index.php?route=common/currency/currency&quot; method=&quot;post&quot; enctype=&quot;multipart/form-data&quot; id=&quot;form-currency&quot;&gt;&#xd;
+    &lt;div class=&quot;btn-group&quot;&gt;&#xd;
+      &lt;button class=&quot;btn btn-link dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;                               &lt;strong&gt;$&lt;/strong&gt;        &lt;span class=&quot;hidden-xs hidden-sm hidden-md&quot;&gt;Currency&lt;/span&gt;&amp;nbsp;&lt;i class=&quot;fa fa-caret-down&quot;&gt;&lt;/i&gt;&lt;/button&gt;&#xd;
+      &lt;ul class=&quot;dropdown-menu&quot;&gt;&#xd;
+                        &lt;li&gt;&#xd;
+          &lt;button class=&quot;currency-select btn btn-link btn-block&quot; type=&quot;button&quot; name=&quot;EUR&quot;&gt;€ Euro&lt;/button&gt;&#xd;
+        &lt;/li&gt;&#xd;
+                                &lt;li&gt;&#xd;
+          &lt;button class=&quot;currency-select btn btn-link btn-block&quot; type=&quot;button&quot; name=&quot;GBP&quot;&gt;£ Pound Sterling&lt;/button&gt;&#xd;
+        &lt;/li&gt;&#xd;
+                                &lt;li&gt;&#xd;
+          &lt;button class=&quot;currency-select btn btn-link btn-block&quot; type=&quot;button&quot; name=&quot;USD&quot;&gt;$ US Dollar&lt;/button&gt;&#xd;
+        &lt;/li&gt;&#xd;
+                      &lt;/ul&gt;&#xd;
+    &lt;/div&gt;&#xd;
+    &lt;input type=&quot;hidden&quot; name=&quot;code&quot; value=&quot;&quot;/&gt;&#xd;
+    &lt;input type=&quot;hidden&quot; name=&quot;redirect&quot; value=&quot;http://opencart.abstracta.us:80/index.php?route=common/home&quot;/&gt;&#xd;
+  &lt;/form&gt;&#xd;
+&lt;/div&gt;&#xd;
+ &#xd;
+    &#xd;
+    &lt;div id=&quot;top-links&quot; class=&quot;nav pull-right&quot;&gt;&#xd;
+      &lt;ul class=&quot;list-inline&quot;&gt;&#xd;
+        &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=information/contact&quot;&gt;&lt;i class=&quot;fa fa-phone&quot;&gt;&lt;/i&gt;&lt;/a&gt; &lt;span class=&quot;hidden-xs hidden-sm hidden-md&quot;&gt;123456789&lt;/span&gt;&lt;/li&gt;&#xd;
+        &lt;li class=&quot;dropdown&quot;&gt;&lt;a href=&quot;https://opencart.abstracta.us:443/index.php?route=account/account&quot; title=&quot;My Account&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;&lt;i class=&quot;fa fa-user&quot;&gt;&lt;/i&gt; &lt;span class=&quot;hidden-xs hidden-sm hidden-md&quot;&gt;My Account&lt;/span&gt; &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/a&gt;&#xd;
+          &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot;&gt;&#xd;
+                        &lt;li&gt;&lt;a href=&quot;https://opencart.abstracta.us:443/index.php?route=account/register&quot;&gt;Register&lt;/a&gt;&lt;/li&gt;&#xd;
+            &lt;li&gt;&lt;a href=&quot;https://opencart.abstracta.us:443/index.php?route=account/login&quot;&gt;Login&lt;/a&gt;&lt;/li&gt;&#xd;
+                      &lt;/ul&gt;&#xd;
+        &lt;/li&gt;&#xd;
+        &lt;li&gt;&lt;a href=&quot;https://opencart.abstracta.us:443/index.php?route=account/wishlist&quot; id=&quot;wishlist-total&quot; title=&quot;Wish List (0)&quot;&gt;&lt;i class=&quot;fa fa-heart&quot;&gt;&lt;/i&gt; &lt;span class=&quot;hidden-xs hidden-sm hidden-md&quot;&gt;Wish List (0)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&#xd;
+        &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=checkout/cart&quot; title=&quot;Shopping Cart&quot;&gt;&lt;i class=&quot;fa fa-shopping-cart&quot;&gt;&lt;/i&gt; &lt;span class=&quot;hidden-xs hidden-sm hidden-md&quot;&gt;Shopping Cart&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&#xd;
+        &lt;li&gt;&lt;a href=&quot;https://opencart.abstracta.us:443/index.php?route=checkout/checkout&quot; title=&quot;Checkout&quot;&gt;&lt;i class=&quot;fa fa-share&quot;&gt;&lt;/i&gt; &lt;span class=&quot;hidden-xs hidden-sm hidden-md&quot;&gt;Checkout&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&#xd;
+      &lt;/ul&gt;&#xd;
+    &lt;/div&gt;&#xd;
+  &lt;/div&gt;&#xd;
+&lt;/nav&gt;&#xd;
+&lt;header&gt;&#xd;
+  &lt;div class=&quot;container&quot;&gt;&#xd;
+    &lt;div class=&quot;row&quot;&gt;&#xd;
+      &lt;div class=&quot;col-sm-4&quot;&gt;&#xd;
+        &lt;div id=&quot;logo&quot;&gt;          &lt;h1&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=common/home&quot;&gt;Your Store&lt;/a&gt;&lt;/h1&gt;&#xd;
+          &lt;/div&gt;&#xd;
+      &lt;/div&gt;&#xd;
+      &lt;div class=&quot;col-sm-5&quot;&gt;&lt;div id=&quot;search&quot; class=&quot;input-group&quot;&gt;&#xd;
+  &lt;input type=&quot;text&quot; name=&quot;search&quot; value=&quot;&quot; placeholder=&quot;Search&quot; class=&quot;form-control input-lg&quot;/&gt;&#xd;
+  &lt;span class=&quot;input-group-btn&quot;&gt;&#xd;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-default btn-lg&quot;&gt;&lt;i class=&quot;fa fa-search&quot;&gt;&lt;/i&gt;&lt;/button&gt;&#xd;
+  &lt;/span&gt;&#xd;
+&lt;/div&gt;&lt;/div&gt;&#xd;
+      &lt;div class=&quot;col-sm-3&quot;&gt;&lt;div id=&quot;cart&quot; class=&quot;btn-group btn-block&quot;&gt;&#xd;
+  &lt;button type=&quot;button&quot; data-toggle=&quot;dropdown&quot; data-loading-text=&quot;Loading...&quot; class=&quot;btn btn-inverse btn-block btn-lg dropdown-toggle&quot;&gt;&lt;i class=&quot;fa fa-shopping-cart&quot;&gt;&lt;/i&gt; &lt;span id=&quot;cart-total&quot;&gt;0 item(s) - $0.00&lt;/span&gt;&lt;/button&gt;&#xd;
+  &lt;ul class=&quot;dropdown-menu pull-right&quot;&gt;&#xd;
+        &lt;li&gt;&#xd;
+      &lt;p class=&quot;text-center&quot;&gt;Your shopping cart is empty!&lt;/p&gt;&#xd;
+    &lt;/li&gt;&#xd;
+      &lt;/ul&gt;&#xd;
+&lt;/div&gt;&#xd;
+&lt;/div&gt;&#xd;
+    &lt;/div&gt;&#xd;
+  &lt;/div&gt;&#xd;
+&lt;/header&gt;&#xd;
+&lt;div class=&quot;container&quot;&gt;&#xd;
+  &lt;nav id=&quot;menu&quot; class=&quot;navbar&quot;&gt;&#xd;
+    &lt;div class=&quot;navbar-header&quot;&gt;&lt;span id=&quot;category&quot; class=&quot;visible-xs&quot;&gt;Categories&lt;/span&gt;&#xd;
+      &lt;button type=&quot;button&quot; class=&quot;btn btn-navbar navbar-toggle&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.navbar-ex1-collapse&quot;&gt;&lt;i class=&quot;fa fa-bars&quot;&gt;&lt;/i&gt;&lt;/button&gt;&#xd;
+    &lt;/div&gt;&#xd;
+    &lt;div class=&quot;collapse navbar-collapse navbar-ex1-collapse&quot;&gt;&#xd;
+      &lt;ul class=&quot;nav navbar-nav&quot;&gt;&#xd;
+                        &lt;li class=&quot;dropdown&quot;&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=20&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;Desktops&lt;/a&gt;&#xd;
+          &lt;div class=&quot;dropdown-menu&quot;&gt;&#xd;
+            &lt;div class=&quot;dropdown-inner&quot;&gt;               &lt;ul class=&quot;list-unstyled&quot;&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=20_26&quot;&gt;PC (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=20_27&quot;&gt;Mac (1)&lt;/a&gt;&lt;/li&gt;&#xd;
+                              &lt;/ul&gt;&#xd;
+              &lt;/div&gt;&#xd;
+            &lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=20&quot; class=&quot;see-all&quot;&gt;Show All Desktops&lt;/a&gt; &lt;/div&gt;&#xd;
+        &lt;/li&gt;&#xd;
+                                &lt;li class=&quot;dropdown&quot;&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=18&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;Laptops &amp;amp; Notebooks&lt;/a&gt;&#xd;
+          &lt;div class=&quot;dropdown-menu&quot;&gt;&#xd;
+            &lt;div class=&quot;dropdown-inner&quot;&gt;               &lt;ul class=&quot;list-unstyled&quot;&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=18_46&quot;&gt;Macs (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=18_45&quot;&gt;Windows (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                              &lt;/ul&gt;&#xd;
+              &lt;/div&gt;&#xd;
+            &lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=18&quot; class=&quot;see-all&quot;&gt;Show All Laptops &amp;amp; Notebooks&lt;/a&gt; &lt;/div&gt;&#xd;
+        &lt;/li&gt;&#xd;
+                                &lt;li class=&quot;dropdown&quot;&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=25&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;Components&lt;/a&gt;&#xd;
+          &lt;div class=&quot;dropdown-menu&quot;&gt;&#xd;
+            &lt;div class=&quot;dropdown-inner&quot;&gt;               &lt;ul class=&quot;list-unstyled&quot;&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=25_29&quot;&gt;Mice and Trackballs (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=25_28&quot;&gt;Monitors (2)&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=25_30&quot;&gt;Printers (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=25_31&quot;&gt;Scanners (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=25_32&quot;&gt;Web Cameras (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                              &lt;/ul&gt;&#xd;
+              &lt;/div&gt;&#xd;
+            &lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=25&quot; class=&quot;see-all&quot;&gt;Show All Components&lt;/a&gt; &lt;/div&gt;&#xd;
+        &lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=57&quot;&gt;Tablets&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=17&quot;&gt;Software&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=24&quot;&gt;Phones &amp;amp; PDAs&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=33&quot;&gt;Cameras&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li class=&quot;dropdown&quot;&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=34&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;MP3 Players&lt;/a&gt;&#xd;
+          &lt;div class=&quot;dropdown-menu&quot;&gt;&#xd;
+            &lt;div class=&quot;dropdown-inner&quot;&gt;               &lt;ul class=&quot;list-unstyled&quot;&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=34_43&quot;&gt;test 11 (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=34_44&quot;&gt;test 12 (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=34_47&quot;&gt;test 15 (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=34_48&quot;&gt;test 16 (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=34_49&quot;&gt;test 17 (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                              &lt;/ul&gt;&#xd;
+                            &lt;ul class=&quot;list-unstyled&quot;&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=34_50&quot;&gt;test 18 (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=34_51&quot;&gt;test 19 (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=34_52&quot;&gt;test 20 (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=34_53&quot;&gt;test 21 (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=34_54&quot;&gt;test 22 (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                              &lt;/ul&gt;&#xd;
+                            &lt;ul class=&quot;list-unstyled&quot;&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=34_55&quot;&gt;test 23 (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=34_56&quot;&gt;test 24 (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=34_38&quot;&gt;test 4 (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=34_37&quot;&gt;test 5 (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=34_39&quot;&gt;test 6 (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                              &lt;/ul&gt;&#xd;
+                            &lt;ul class=&quot;list-unstyled&quot;&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=34_40&quot;&gt;test 7 (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=34_41&quot;&gt;test 8 (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=34_42&quot;&gt;test 9 (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                              &lt;/ul&gt;&#xd;
+              &lt;/div&gt;&#xd;
+            &lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=34&quot; class=&quot;see-all&quot;&gt;Show All MP3 Players&lt;/a&gt; &lt;/div&gt;&#xd;
+        &lt;/li&gt;&#xd;
+                      &lt;/ul&gt;&#xd;
+    &lt;/div&gt;&#xd;
+  &lt;/nav&gt;&#xd;
+&lt;/div&gt;&#xd;
+ &#xd;
+&#xd;
+&lt;div id=&quot;common-home&quot; class=&quot;container&quot;&gt;&#xd;
+  &lt;div class=&quot;row&quot;&gt;&#xd;
+                &lt;div id=&quot;content&quot; class=&quot;col-sm-12&quot;&gt;&lt;div class=&quot;swiper-viewport&quot;&gt;&#xd;
+  &lt;div id=&quot;slideshow0&quot; class=&quot;swiper-container&quot;&gt;&#xd;
+    &lt;div class=&quot;swiper-wrapper&quot;&gt;       &lt;div class=&quot;swiper-slide text-center&quot;&gt;&lt;a href=&quot;index.php?route=product/product&amp;amp;path=57&amp;amp;product_id=49&quot;&gt;&lt;img src=&quot;https://opencart.abstracta.us:443/image/cache/catalog/demo/banners/iPhone6-1140x380.jpg&quot; alt=&quot;iPhone 6&quot; class=&quot;img-responsive&quot;/&gt;&lt;/a&gt;&lt;/div&gt;&#xd;
+            &lt;div class=&quot;swiper-slide text-center&quot;&gt;&lt;img src=&quot;https://opencart.abstracta.us:443/image/cache/catalog/demo/banners/MacBookAir-1140x380.jpg&quot; alt=&quot;MacBookAir&quot; class=&quot;img-responsive&quot;/&gt;&lt;/div&gt;&#xd;
+       &lt;/div&gt;&#xd;
+  &lt;/div&gt;&#xd;
+  &lt;div class=&quot;swiper-pagination slideshow0&quot;&gt;&lt;/div&gt;&#xd;
+  &lt;div class=&quot;swiper-pager&quot;&gt;&#xd;
+    &lt;div class=&quot;swiper-button-next&quot;&gt;&lt;/div&gt;&#xd;
+    &lt;div class=&quot;swiper-button-prev&quot;&gt;&lt;/div&gt;&#xd;
+  &lt;/div&gt;&#xd;
+&lt;/div&gt;&#xd;
+&lt;script type=&quot;text/javascript&quot;&gt;$(&apos;#slideshow0&apos;).swiper({mode:&apos;horizontal&apos;,slidesPerView:1,pagination:&apos;.slideshow0&apos;,paginationClickable:true,nextButton:&apos;.swiper-button-next&apos;,prevButton:&apos;.swiper-button-prev&apos;,spaceBetween:30,autoplay:2500,autoplayDisableOnInteraction:true,loop:true});&lt;/script&gt;&#xd;
+&lt;h3&gt;Featured&lt;/h3&gt;&#xd;
+&lt;div class=&quot;row&quot;&gt;&#xd;
+   &lt;div class=&quot;product-layout col-lg-3 col-md-3 col-sm-6 col-xs-12&quot;&gt;&#xd;
+    &lt;div class=&quot;product-thumb transition&quot;&gt;&#xd;
+      &lt;div class=&quot;image&quot;&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/product&amp;amp;product_id=43&quot;&gt;&lt;img src=&quot;https://opencart.abstracta.us:443/image/cache/catalog/demo/macbook_1-200x200.jpg&quot; alt=&quot;MacBook&quot; title=&quot;MacBook&quot; class=&quot;img-responsive&quot;/&gt;&lt;/a&gt;&lt;/div&gt;&#xd;
+      &lt;div class=&quot;caption&quot;&gt;&#xd;
+        &lt;h4&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/product&amp;amp;product_id=43&quot;&gt;MacBook&lt;/a&gt;&lt;/h4&gt;&#xd;
+        &lt;p&gt;&#xd;
+	&#xd;
+		Intel Core 2 Duo processor&#xd;
+	&#xd;
+		Powered by an Intel Core 2 Duo processor at speeds up to 2.1..&lt;/p&gt;&#xd;
+                        &lt;p class=&quot;price&quot;&gt;&#xd;
+                    $602.00&#xd;
+                              &lt;span class=&quot;price-tax&quot;&gt;Ex Tax: $500.00&lt;/span&gt;&#xd;
+                  &lt;/p&gt;&#xd;
+              &lt;/div&gt;&#xd;
+      &lt;div class=&quot;button-group&quot;&gt;&#xd;
+        &lt;button type=&quot;button&quot; onclick=&quot;cart.add(&apos;43&apos;);&quot;&gt;&lt;i class=&quot;fa fa-shopping-cart&quot;&gt;&lt;/i&gt; &lt;span class=&quot;hidden-xs hidden-sm hidden-md&quot;&gt;Add to Cart&lt;/span&gt;&lt;/button&gt;&#xd;
+        &lt;button type=&quot;button&quot; data-toggle=&quot;tooltip&quot; title=&quot;Add to Wish List&quot; onclick=&quot;wishlist.add(&apos;43&apos;);&quot;&gt;&lt;i class=&quot;fa fa-heart&quot;&gt;&lt;/i&gt;&lt;/button&gt;&#xd;
+        &lt;button type=&quot;button&quot; data-toggle=&quot;tooltip&quot; title=&quot;Compare this Product&quot; onclick=&quot;compare.add(&apos;43&apos;);&quot;&gt;&lt;i class=&quot;fa fa-exchange&quot;&gt;&lt;/i&gt;&lt;/button&gt;&#xd;
+      &lt;/div&gt;&#xd;
+    &lt;/div&gt;&#xd;
+  &lt;/div&gt;&#xd;
+    &lt;div class=&quot;product-layout col-lg-3 col-md-3 col-sm-6 col-xs-12&quot;&gt;&#xd;
+    &lt;div class=&quot;product-thumb transition&quot;&gt;&#xd;
+      &lt;div class=&quot;image&quot;&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/product&amp;amp;product_id=40&quot;&gt;&lt;img src=&quot;https://opencart.abstracta.us:443/image/cache/catalog/demo/iphone_1-200x200.jpg&quot; alt=&quot;iPhone&quot; title=&quot;iPhone&quot; class=&quot;img-responsive&quot;/&gt;&lt;/a&gt;&lt;/div&gt;&#xd;
+      &lt;div class=&quot;caption&quot;&gt;&#xd;
+        &lt;h4&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/product&amp;amp;product_id=40&quot;&gt;iPhone&lt;/a&gt;&lt;/h4&gt;&#xd;
+        &lt;p&gt;&#xd;
+	iPhone is a revolutionary new mobile phone that allows you to make a call by simply tapping a nam..&lt;/p&gt;&#xd;
+                        &lt;p class=&quot;price&quot;&gt;&#xd;
+                    $123.20&#xd;
+                              &lt;span class=&quot;price-tax&quot;&gt;Ex Tax: $101.00&lt;/span&gt;&#xd;
+                  &lt;/p&gt;&#xd;
+              &lt;/div&gt;&#xd;
+      &lt;div class=&quot;button-group&quot;&gt;&#xd;
+        &lt;button type=&quot;button&quot; onclick=&quot;cart.add(&apos;40&apos;);&quot;&gt;&lt;i class=&quot;fa fa-shopping-cart&quot;&gt;&lt;/i&gt; &lt;span class=&quot;hidden-xs hidden-sm hidden-md&quot;&gt;Add to Cart&lt;/span&gt;&lt;/button&gt;&#xd;
+        &lt;button type=&quot;button&quot; data-toggle=&quot;tooltip&quot; title=&quot;Add to Wish List&quot; onclick=&quot;wishlist.add(&apos;40&apos;);&quot;&gt;&lt;i class=&quot;fa fa-heart&quot;&gt;&lt;/i&gt;&lt;/button&gt;&#xd;
+        &lt;button type=&quot;button&quot; data-toggle=&quot;tooltip&quot; title=&quot;Compare this Product&quot; onclick=&quot;compare.add(&apos;40&apos;);&quot;&gt;&lt;i class=&quot;fa fa-exchange&quot;&gt;&lt;/i&gt;&lt;/button&gt;&#xd;
+      &lt;/div&gt;&#xd;
+    &lt;/div&gt;&#xd;
+  &lt;/div&gt;&#xd;
+    &lt;div class=&quot;product-layout col-lg-3 col-md-3 col-sm-6 col-xs-12&quot;&gt;&#xd;
+    &lt;div class=&quot;product-thumb transition&quot;&gt;&#xd;
+      &lt;div class=&quot;image&quot;&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/product&amp;amp;product_id=42&quot;&gt;&lt;img src=&quot;https://opencart.abstracta.us:443/image/cache/catalog/demo/apple_cinema_30-200x200.jpg&quot; alt=&quot;Apple Cinema 30&amp;quot;&quot; title=&quot;Apple Cinema 30&amp;quot;&quot; class=&quot;img-responsive&quot;/&gt;&lt;/a&gt;&lt;/div&gt;&#xd;
+      &lt;div class=&quot;caption&quot;&gt;&#xd;
+        &lt;h4&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/product&amp;amp;product_id=42&quot;&gt;Apple Cinema 30&amp;quot;&lt;/a&gt;&lt;/h4&gt;&#xd;
+        &lt;p&gt;&#xd;
+	The 30-inch Apple Cinema HD Display delivers an amazing 2560 x 1600 pixel resolution. Designed sp..&lt;/p&gt;&#xd;
+                        &lt;p class=&quot;price&quot;&gt;&#xd;
+                    &lt;span class=&quot;price-new&quot;&gt;$110.00&lt;/span&gt; &lt;span class=&quot;price-old&quot;&gt;$122.00&lt;/span&gt;&#xd;
+                              &lt;span class=&quot;price-tax&quot;&gt;Ex Tax: $90.00&lt;/span&gt;&#xd;
+                  &lt;/p&gt;&#xd;
+              &lt;/div&gt;&#xd;
+      &lt;div class=&quot;button-group&quot;&gt;&#xd;
+        &lt;button type=&quot;button&quot; onclick=&quot;cart.add(&apos;42&apos;);&quot;&gt;&lt;i class=&quot;fa fa-shopping-cart&quot;&gt;&lt;/i&gt; &lt;span class=&quot;hidden-xs hidden-sm hidden-md&quot;&gt;Add to Cart&lt;/span&gt;&lt;/button&gt;&#xd;
+        &lt;button type=&quot;button&quot; data-toggle=&quot;tooltip&quot; title=&quot;Add to Wish List&quot; onclick=&quot;wishlist.add(&apos;42&apos;);&quot;&gt;&lt;i class=&quot;fa fa-heart&quot;&gt;&lt;/i&gt;&lt;/button&gt;&#xd;
+        &lt;button type=&quot;button&quot; data-toggle=&quot;tooltip&quot; title=&quot;Compare this Product&quot; onclick=&quot;compare.add(&apos;42&apos;);&quot;&gt;&lt;i class=&quot;fa fa-exchange&quot;&gt;&lt;/i&gt;&lt;/button&gt;&#xd;
+      &lt;/div&gt;&#xd;
+    &lt;/div&gt;&#xd;
+  &lt;/div&gt;&#xd;
+    &lt;div class=&quot;product-layout col-lg-3 col-md-3 col-sm-6 col-xs-12&quot;&gt;&#xd;
+    &lt;div class=&quot;product-thumb transition&quot;&gt;&#xd;
+      &lt;div class=&quot;image&quot;&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/product&amp;amp;product_id=30&quot;&gt;&lt;img src=&quot;https://opencart.abstracta.us:443/image/cache/catalog/demo/canon_eos_5d_1-200x200.jpg&quot; alt=&quot;Canon EOS 5D&quot; title=&quot;Canon EOS 5D&quot; class=&quot;img-responsive&quot;/&gt;&lt;/a&gt;&lt;/div&gt;&#xd;
+      &lt;div class=&quot;caption&quot;&gt;&#xd;
+        &lt;h4&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/product&amp;amp;product_id=30&quot;&gt;Canon EOS 5D&lt;/a&gt;&lt;/h4&gt;&#xd;
+        &lt;p&gt;&#xd;
+	Canon&apos;s press material for the EOS 5D states that it &apos;defines (a) new D-SLR category&apos;, while we&apos;r..&lt;/p&gt;&#xd;
+                        &lt;p class=&quot;price&quot;&gt;&#xd;
+                    &lt;span class=&quot;price-new&quot;&gt;$98.00&lt;/span&gt; &lt;span class=&quot;price-old&quot;&gt;$122.00&lt;/span&gt;&#xd;
+                              &lt;span class=&quot;price-tax&quot;&gt;Ex Tax: $80.00&lt;/span&gt;&#xd;
+                  &lt;/p&gt;&#xd;
+              &lt;/div&gt;&#xd;
+      &lt;div class=&quot;button-group&quot;&gt;&#xd;
+        &lt;button type=&quot;button&quot; onclick=&quot;cart.add(&apos;30&apos;);&quot;&gt;&lt;i class=&quot;fa fa-shopping-cart&quot;&gt;&lt;/i&gt; &lt;span class=&quot;hidden-xs hidden-sm hidden-md&quot;&gt;Add to Cart&lt;/span&gt;&lt;/button&gt;&#xd;
+        &lt;button type=&quot;button&quot; data-toggle=&quot;tooltip&quot; title=&quot;Add to Wish List&quot; onclick=&quot;wishlist.add(&apos;30&apos;);&quot;&gt;&lt;i class=&quot;fa fa-heart&quot;&gt;&lt;/i&gt;&lt;/button&gt;&#xd;
+        &lt;button type=&quot;button&quot; data-toggle=&quot;tooltip&quot; title=&quot;Compare this Product&quot; onclick=&quot;compare.add(&apos;30&apos;);&quot;&gt;&lt;i class=&quot;fa fa-exchange&quot;&gt;&lt;/i&gt;&lt;/button&gt;&#xd;
+      &lt;/div&gt;&#xd;
+    &lt;/div&gt;&#xd;
+  &lt;/div&gt;&#xd;
+  &lt;/div&gt;&#xd;
+&#xd;
+&lt;div class=&quot;swiper-viewport&quot;&gt;&#xd;
+  &lt;div id=&quot;carousel0&quot; class=&quot;swiper-container&quot;&gt;&#xd;
+    &lt;div class=&quot;swiper-wrapper&quot;&gt;      &lt;div class=&quot;swiper-slide text-center&quot;&gt;&lt;img src=&quot;https://opencart.abstracta.us:443/image/cache/catalog/demo/manufacturer/nfl-130x100.png&quot; alt=&quot;NFL&quot; class=&quot;img-responsive&quot;/&gt;&lt;/div&gt;&#xd;
+            &lt;div class=&quot;swiper-slide text-center&quot;&gt;&lt;img src=&quot;https://opencart.abstracta.us:443/image/cache/catalog/demo/manufacturer/redbull-130x100.png&quot; alt=&quot;RedBull&quot; class=&quot;img-responsive&quot;/&gt;&lt;/div&gt;&#xd;
+            &lt;div class=&quot;swiper-slide text-center&quot;&gt;&lt;img src=&quot;https://opencart.abstracta.us:443/image/cache/catalog/demo/manufacturer/sony-130x100.png&quot; alt=&quot;Sony&quot; class=&quot;img-responsive&quot;/&gt;&lt;/div&gt;&#xd;
+            &lt;div class=&quot;swiper-slide text-center&quot;&gt;&lt;img src=&quot;https://opencart.abstracta.us:443/image/cache/catalog/demo/manufacturer/cocacola-130x100.png&quot; alt=&quot;Coca Cola&quot; class=&quot;img-responsive&quot;/&gt;&lt;/div&gt;&#xd;
+            &lt;div class=&quot;swiper-slide text-center&quot;&gt;&lt;img src=&quot;https://opencart.abstracta.us:443/image/cache/catalog/demo/manufacturer/burgerking-130x100.png&quot; alt=&quot;Burger King&quot; class=&quot;img-responsive&quot;/&gt;&lt;/div&gt;&#xd;
+            &lt;div class=&quot;swiper-slide text-center&quot;&gt;&lt;img src=&quot;https://opencart.abstracta.us:443/image/cache/catalog/demo/manufacturer/canon-130x100.png&quot; alt=&quot;Canon&quot; class=&quot;img-responsive&quot;/&gt;&lt;/div&gt;&#xd;
+            &lt;div class=&quot;swiper-slide text-center&quot;&gt;&lt;img src=&quot;https://opencart.abstracta.us:443/image/cache/catalog/demo/manufacturer/harley-130x100.png&quot; alt=&quot;Harley Davidson&quot; class=&quot;img-responsive&quot;/&gt;&lt;/div&gt;&#xd;
+            &lt;div class=&quot;swiper-slide text-center&quot;&gt;&lt;img src=&quot;https://opencart.abstracta.us:443/image/cache/catalog/demo/manufacturer/dell-130x100.png&quot; alt=&quot;Dell&quot; class=&quot;img-responsive&quot;/&gt;&lt;/div&gt;&#xd;
+            &lt;div class=&quot;swiper-slide text-center&quot;&gt;&lt;img src=&quot;https://opencart.abstracta.us:443/image/cache/catalog/demo/manufacturer/disney-130x100.png&quot; alt=&quot;Disney&quot; class=&quot;img-responsive&quot;/&gt;&lt;/div&gt;&#xd;
+            &lt;div class=&quot;swiper-slide text-center&quot;&gt;&lt;img src=&quot;https://opencart.abstracta.us:443/image/cache/catalog/demo/manufacturer/starbucks-130x100.png&quot; alt=&quot;Starbucks&quot; class=&quot;img-responsive&quot;/&gt;&lt;/div&gt;&#xd;
+            &lt;div class=&quot;swiper-slide text-center&quot;&gt;&lt;img src=&quot;https://opencart.abstracta.us:443/image/cache/catalog/demo/manufacturer/nintendo-130x100.png&quot; alt=&quot;Nintendo&quot; class=&quot;img-responsive&quot;/&gt;&lt;/div&gt;&#xd;
+      &lt;/div&gt;&#xd;
+  &lt;/div&gt;&#xd;
+  &lt;div class=&quot;swiper-pagination carousel0&quot;&gt;&lt;/div&gt;&#xd;
+  &lt;div class=&quot;swiper-pager&quot;&gt;&#xd;
+    &lt;div class=&quot;swiper-button-next&quot;&gt;&lt;/div&gt;&#xd;
+    &lt;div class=&quot;swiper-button-prev&quot;&gt;&lt;/div&gt;&#xd;
+  &lt;/div&gt;&#xd;
+&lt;/div&gt;&#xd;
+&lt;script type=&quot;text/javascript&quot;&gt;$(&apos;#carousel0&apos;).swiper({mode:&apos;horizontal&apos;,slidesPerView:5,pagination:&apos;.carousel0&apos;,paginationClickable:true,nextButton:&apos;.swiper-button-next&apos;,prevButton:&apos;.swiper-button-prev&apos;,autoplay:2500,loop:true});&lt;/script&gt;&#xd;
+&lt;/div&gt;&#xd;
+    &lt;/div&gt;&#xd;
+&lt;/div&gt;&#xd;
+&lt;footer&gt;&#xd;
+  &lt;div class=&quot;container&quot;&gt;&#xd;
+    &lt;div class=&quot;row&quot;&gt;&#xd;
+            &lt;div class=&quot;col-sm-3&quot;&gt;&#xd;
+        &lt;h5&gt;Information&lt;/h5&gt;&#xd;
+        &lt;ul class=&quot;list-unstyled&quot;&gt;&#xd;
+                   &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=information/information&amp;amp;information_id=4&quot;&gt;About Us&lt;/a&gt;&lt;/li&gt;&#xd;
+                    &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=information/information&amp;amp;information_id=6&quot;&gt;Delivery Information&lt;/a&gt;&lt;/li&gt;&#xd;
+                    &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=information/information&amp;amp;information_id=3&quot;&gt;Privacy Policy&lt;/a&gt;&lt;/li&gt;&#xd;
+                    &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=information/information&amp;amp;information_id=5&quot;&gt;Terms &amp;amp; Conditions&lt;/a&gt;&lt;/li&gt;&#xd;
+                  &lt;/ul&gt;&#xd;
+      &lt;/div&gt;&#xd;
+            &lt;div class=&quot;col-sm-3&quot;&gt;&#xd;
+        &lt;h5&gt;Customer Service&lt;/h5&gt;&#xd;
+        &lt;ul class=&quot;list-unstyled&quot;&gt;&#xd;
+          &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=information/contact&quot;&gt;Contact Us&lt;/a&gt;&lt;/li&gt;&#xd;
+          &lt;li&gt;&lt;a href=&quot;https://opencart.abstracta.us:443/index.php?route=account/return/add&quot;&gt;Returns&lt;/a&gt;&lt;/li&gt;&#xd;
+          &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=information/sitemap&quot;&gt;Site Map&lt;/a&gt;&lt;/li&gt;&#xd;
+        &lt;/ul&gt;&#xd;
+      &lt;/div&gt;&#xd;
+      &lt;div class=&quot;col-sm-3&quot;&gt;&#xd;
+        &lt;h5&gt;Extras&lt;/h5&gt;&#xd;
+        &lt;ul class=&quot;list-unstyled&quot;&gt;&#xd;
+          &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/manufacturer&quot;&gt;Brands&lt;/a&gt;&lt;/li&gt;&#xd;
+          &lt;li&gt;&lt;a href=&quot;https://opencart.abstracta.us:443/index.php?route=account/voucher&quot;&gt;Gift Certificates&lt;/a&gt;&lt;/li&gt;&#xd;
+          &lt;li&gt;&lt;a href=&quot;https://opencart.abstracta.us:443/index.php?route=affiliate/login&quot;&gt;Affiliate&lt;/a&gt;&lt;/li&gt;&#xd;
+          &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/special&quot;&gt;Specials&lt;/a&gt;&lt;/li&gt;&#xd;
+        &lt;/ul&gt;&#xd;
+      &lt;/div&gt;&#xd;
+      &lt;div class=&quot;col-sm-3&quot;&gt;&#xd;
+        &lt;h5&gt;My Account&lt;/h5&gt;&#xd;
+        &lt;ul class=&quot;list-unstyled&quot;&gt;&#xd;
+          &lt;li&gt;&lt;a href=&quot;https://opencart.abstracta.us:443/index.php?route=account/account&quot;&gt;My Account&lt;/a&gt;&lt;/li&gt;&#xd;
+          &lt;li&gt;&lt;a href=&quot;https://opencart.abstracta.us:443/index.php?route=account/order&quot;&gt;Order History&lt;/a&gt;&lt;/li&gt;&#xd;
+          &lt;li&gt;&lt;a href=&quot;https://opencart.abstracta.us:443/index.php?route=account/wishlist&quot;&gt;Wish List&lt;/a&gt;&lt;/li&gt;&#xd;
+          &lt;li&gt;&lt;a href=&quot;https://opencart.abstracta.us:443/index.php?route=account/newsletter&quot;&gt;Newsletter&lt;/a&gt;&lt;/li&gt;&#xd;
+        &lt;/ul&gt;&#xd;
+      &lt;/div&gt;&#xd;
+    &lt;/div&gt;&#xd;
+    &lt;hr&gt;&#xd;
+    &lt;p&gt;Powered By &lt;a href=&quot;http://www.opencart.com&quot;&gt;OpenCart&lt;/a&gt;&lt;br/&gt; Your Store &amp;copy; 2022&lt;/p&gt;&#xd;
+  &lt;/div&gt;&#xd;
+&lt;/footer&gt;&#xd;
+&lt;!--&#xd;
+OpenCart is open source software and you are free to remove the powered by OpenCart if you want, but its generally accepted practise to make a small donation.&#xd;
+Please donate via PayPal to donate@opencart.com&#xd;
+//--&gt;&#xd;
+  &lt;div id=&quot;bitnami-banner&quot; data-banner-id=&quot;d32a9&quot;&gt;  &lt;style&gt;#bitnami-banner{z-index:100000;height:80px;padding:0;width:120px;background:transparent;position:fixed;right:0;bottom:0;border:0 solid #ededed}#bitnami-banner .bitnami-corner-image-div{position:fixed;right:0;bottom:0;border:0;z-index:100001;height:110px}#bitnami-banner .bitnami-corner-image-div .bitnami-corner-image{position:fixed;right:0;bottom:0;border:0;z-index:100001;height:110px}#bitnami-close-banner-button{height:12px;width:12px;z-index:10000000000;position:fixed;right:5px;bottom:65px;display:none;cursor:pointer}&lt;/style&gt;  &lt;img id=&quot;bitnami-close-banner-button&quot; src=&quot;/bitnami/images/close.png&quot;/&gt;  &lt;div class=&quot;bitnami-corner-image-div&quot;&gt;     &lt;a href=&quot;/bitnami/index.html&quot; target=&quot;_blank&quot;&gt;       &lt;img class=&quot;bitnami-corner-image&quot; alt=&quot;Bitnami&quot; src=&quot;/bitnami/images/corner-logo.png&quot;/&gt;     &lt;/a&gt;  &lt;/div&gt;  &lt;script type=&quot;text/javascript&quot; src=&quot;/bitnami/banner.js&quot;&gt;&lt;/script&gt; &lt;/div&gt;   &lt;/body&gt;&lt;/html&gt;</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">opencart.abstracta.us</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path"></stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="estres " enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">500</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">&lt;!DOCTYPE html&gt;&#xd;
+&lt;!--[if IE]&gt;&lt;![endif]--&gt;&#xd;
+&lt;!--[if IE 8 ]&gt;&lt;html dir=&quot;ltr&quot; lang=&quot;en&quot; class=&quot;ie8&quot;&gt;&lt;![endif]--&gt;&#xd;
+&lt;!--[if IE 9 ]&gt;&lt;html dir=&quot;ltr&quot; lang=&quot;en&quot; class=&quot;ie9&quot;&gt;&lt;![endif]--&gt;&#xd;
+&lt;!--[if (gt IE 9)|!(IE)]&gt;&lt;!--&gt;&#xd;
+&lt;html dir=&quot;ltr&quot; lang=&quot;en&quot;&gt;&#xd;
+&lt;!--&lt;![endif]--&gt;&#xd;
+&lt;head&gt;&#xd;
+&lt;meta charset=&quot;UTF-8&quot;/&gt;&#xd;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;&#xd;
+&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;&#xd;
+&lt;title&gt;Your Store&lt;/title&gt;&#xd;
+&lt;base href=&quot;https://opencart.abstracta.us:443/&quot;/&gt;&#xd;
+&lt;meta name=&quot;description&quot; content=&quot;My Store&quot;/&gt;&#xd;
+&lt;script src=&quot;catalog/view/javascript/jquery/jquery-2.1.1.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;&#xd;
+&lt;link href=&quot;catalog/view/javascript/bootstrap/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; media=&quot;screen&quot;/&gt;&#xd;
+&lt;script src=&quot;catalog/view/javascript/bootstrap/js/bootstrap.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;&#xd;
+&lt;link href=&quot;catalog/view/javascript/font-awesome/css/font-awesome.min.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;/&gt;&#xd;
+&lt;link href=&quot;//fonts.googleapis.com/css?family=Open+Sans:400,400i,300,700&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;/&gt;&#xd;
+&lt;link href=&quot;catalog/view/theme/default/stylesheet/stylesheet.css&quot; rel=&quot;stylesheet&quot;&gt;&#xd;
+&lt;link href=&quot;catalog/view/javascript/jquery/swiper/css/swiper.min.css&quot; type=&quot;text/css&quot; rel=&quot;stylesheet&quot; media=&quot;screen&quot;/&gt;&#xd;
+&lt;link href=&quot;catalog/view/javascript/jquery/swiper/css/opencart.css&quot; type=&quot;text/css&quot; rel=&quot;stylesheet&quot; media=&quot;screen&quot;/&gt;&#xd;
+&lt;script src=&quot;catalog/view/javascript/jquery/swiper/js/swiper.jquery.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;&#xd;
+&lt;script src=&quot;catalog/view/javascript/common.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;&#xd;
+&lt;link href=&quot;https://opencart.abstracta.us:443/image/catalog/cart.png&quot; rel=&quot;icon&quot;/&gt;&#xd;
+&lt;/head&gt;&#xd;
+&lt;body&gt;&#xd;
+&lt;nav id=&quot;top&quot;&gt;&#xd;
+  &lt;div class=&quot;container&quot;&gt;&lt;div class=&quot;pull-left&quot;&gt;&#xd;
+  &lt;form action=&quot;https://opencart.abstracta.us:443/index.php?route=common/currency/currency&quot; method=&quot;post&quot; enctype=&quot;multipart/form-data&quot; id=&quot;form-currency&quot;&gt;&#xd;
+    &lt;div class=&quot;btn-group&quot;&gt;&#xd;
+      &lt;button class=&quot;btn btn-link dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;                               &lt;strong&gt;$&lt;/strong&gt;        &lt;span class=&quot;hidden-xs hidden-sm hidden-md&quot;&gt;Currency&lt;/span&gt;&amp;nbsp;&lt;i class=&quot;fa fa-caret-down&quot;&gt;&lt;/i&gt;&lt;/button&gt;&#xd;
+      &lt;ul class=&quot;dropdown-menu&quot;&gt;&#xd;
+                        &lt;li&gt;&#xd;
+          &lt;button class=&quot;currency-select btn btn-link btn-block&quot; type=&quot;button&quot; name=&quot;EUR&quot;&gt;€ Euro&lt;/button&gt;&#xd;
+        &lt;/li&gt;&#xd;
+                                &lt;li&gt;&#xd;
+          &lt;button class=&quot;currency-select btn btn-link btn-block&quot; type=&quot;button&quot; name=&quot;GBP&quot;&gt;£ Pound Sterling&lt;/button&gt;&#xd;
+        &lt;/li&gt;&#xd;
+                                &lt;li&gt;&#xd;
+          &lt;button class=&quot;currency-select btn btn-link btn-block&quot; type=&quot;button&quot; name=&quot;USD&quot;&gt;$ US Dollar&lt;/button&gt;&#xd;
+        &lt;/li&gt;&#xd;
+                      &lt;/ul&gt;&#xd;
+    &lt;/div&gt;&#xd;
+    &lt;input type=&quot;hidden&quot; name=&quot;code&quot; value=&quot;&quot;/&gt;&#xd;
+    &lt;input type=&quot;hidden&quot; name=&quot;redirect&quot; value=&quot;http://opencart.abstracta.us:80/index.php?route=common/home&quot;/&gt;&#xd;
+  &lt;/form&gt;&#xd;
+&lt;/div&gt;&#xd;
+ &#xd;
+    &#xd;
+    &lt;div id=&quot;top-links&quot; class=&quot;nav pull-right&quot;&gt;&#xd;
+      &lt;ul class=&quot;list-inline&quot;&gt;&#xd;
+        &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=information/contact&quot;&gt;&lt;i class=&quot;fa fa-phone&quot;&gt;&lt;/i&gt;&lt;/a&gt; &lt;span class=&quot;hidden-xs hidden-sm hidden-md&quot;&gt;123456789&lt;/span&gt;&lt;/li&gt;&#xd;
+        &lt;li class=&quot;dropdown&quot;&gt;&lt;a href=&quot;https://opencart.abstracta.us:443/index.php?route=account/account&quot; title=&quot;My Account&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;&lt;i class=&quot;fa fa-user&quot;&gt;&lt;/i&gt; &lt;span class=&quot;hidden-xs hidden-sm hidden-md&quot;&gt;My Account&lt;/span&gt; &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/a&gt;&#xd;
+          &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot;&gt;&#xd;
+                        &lt;li&gt;&lt;a href=&quot;https://opencart.abstracta.us:443/index.php?route=account/register&quot;&gt;Register&lt;/a&gt;&lt;/li&gt;&#xd;
+            &lt;li&gt;&lt;a href=&quot;https://opencart.abstracta.us:443/index.php?route=account/login&quot;&gt;Login&lt;/a&gt;&lt;/li&gt;&#xd;
+                      &lt;/ul&gt;&#xd;
+        &lt;/li&gt;&#xd;
+        &lt;li&gt;&lt;a href=&quot;https://opencart.abstracta.us:443/index.php?route=account/wishlist&quot; id=&quot;wishlist-total&quot; title=&quot;Wish List (0)&quot;&gt;&lt;i class=&quot;fa fa-heart&quot;&gt;&lt;/i&gt; &lt;span class=&quot;hidden-xs hidden-sm hidden-md&quot;&gt;Wish List (0)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&#xd;
+        &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=checkout/cart&quot; title=&quot;Shopping Cart&quot;&gt;&lt;i class=&quot;fa fa-shopping-cart&quot;&gt;&lt;/i&gt; &lt;span class=&quot;hidden-xs hidden-sm hidden-md&quot;&gt;Shopping Cart&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&#xd;
+        &lt;li&gt;&lt;a href=&quot;https://opencart.abstracta.us:443/index.php?route=checkout/checkout&quot; title=&quot;Checkout&quot;&gt;&lt;i class=&quot;fa fa-share&quot;&gt;&lt;/i&gt; &lt;span class=&quot;hidden-xs hidden-sm hidden-md&quot;&gt;Checkout&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&#xd;
+      &lt;/ul&gt;&#xd;
+    &lt;/div&gt;&#xd;
+  &lt;/div&gt;&#xd;
+&lt;/nav&gt;&#xd;
+&lt;header&gt;&#xd;
+  &lt;div class=&quot;container&quot;&gt;&#xd;
+    &lt;div class=&quot;row&quot;&gt;&#xd;
+      &lt;div class=&quot;col-sm-4&quot;&gt;&#xd;
+        &lt;div id=&quot;logo&quot;&gt;          &lt;h1&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=common/home&quot;&gt;Your Store&lt;/a&gt;&lt;/h1&gt;&#xd;
+          &lt;/div&gt;&#xd;
+      &lt;/div&gt;&#xd;
+      &lt;div class=&quot;col-sm-5&quot;&gt;&lt;div id=&quot;search&quot; class=&quot;input-group&quot;&gt;&#xd;
+  &lt;input type=&quot;text&quot; name=&quot;search&quot; value=&quot;&quot; placeholder=&quot;Search&quot; class=&quot;form-control input-lg&quot;/&gt;&#xd;
+  &lt;span class=&quot;input-group-btn&quot;&gt;&#xd;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-default btn-lg&quot;&gt;&lt;i class=&quot;fa fa-search&quot;&gt;&lt;/i&gt;&lt;/button&gt;&#xd;
+  &lt;/span&gt;&#xd;
+&lt;/div&gt;&lt;/div&gt;&#xd;
+      &lt;div class=&quot;col-sm-3&quot;&gt;&lt;div id=&quot;cart&quot; class=&quot;btn-group btn-block&quot;&gt;&#xd;
+  &lt;button type=&quot;button&quot; data-toggle=&quot;dropdown&quot; data-loading-text=&quot;Loading...&quot; class=&quot;btn btn-inverse btn-block btn-lg dropdown-toggle&quot;&gt;&lt;i class=&quot;fa fa-shopping-cart&quot;&gt;&lt;/i&gt; &lt;span id=&quot;cart-total&quot;&gt;0 item(s) - $0.00&lt;/span&gt;&lt;/button&gt;&#xd;
+  &lt;ul class=&quot;dropdown-menu pull-right&quot;&gt;&#xd;
+        &lt;li&gt;&#xd;
+      &lt;p class=&quot;text-center&quot;&gt;Your shopping cart is empty!&lt;/p&gt;&#xd;
+    &lt;/li&gt;&#xd;
+      &lt;/ul&gt;&#xd;
+&lt;/div&gt;&#xd;
+&lt;/div&gt;&#xd;
+    &lt;/div&gt;&#xd;
+  &lt;/div&gt;&#xd;
+&lt;/header&gt;&#xd;
+&lt;div class=&quot;container&quot;&gt;&#xd;
+  &lt;nav id=&quot;menu&quot; class=&quot;navbar&quot;&gt;&#xd;
+    &lt;div class=&quot;navbar-header&quot;&gt;&lt;span id=&quot;category&quot; class=&quot;visible-xs&quot;&gt;Categories&lt;/span&gt;&#xd;
+      &lt;button type=&quot;button&quot; class=&quot;btn btn-navbar navbar-toggle&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.navbar-ex1-collapse&quot;&gt;&lt;i class=&quot;fa fa-bars&quot;&gt;&lt;/i&gt;&lt;/button&gt;&#xd;
+    &lt;/div&gt;&#xd;
+    &lt;div class=&quot;collapse navbar-collapse navbar-ex1-collapse&quot;&gt;&#xd;
+      &lt;ul class=&quot;nav navbar-nav&quot;&gt;&#xd;
+                        &lt;li class=&quot;dropdown&quot;&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=20&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;Desktops&lt;/a&gt;&#xd;
+          &lt;div class=&quot;dropdown-menu&quot;&gt;&#xd;
+            &lt;div class=&quot;dropdown-inner&quot;&gt;               &lt;ul class=&quot;list-unstyled&quot;&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=20_26&quot;&gt;PC (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=20_27&quot;&gt;Mac (1)&lt;/a&gt;&lt;/li&gt;&#xd;
+                              &lt;/ul&gt;&#xd;
+              &lt;/div&gt;&#xd;
+            &lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=20&quot; class=&quot;see-all&quot;&gt;Show All Desktops&lt;/a&gt; &lt;/div&gt;&#xd;
+        &lt;/li&gt;&#xd;
+                                &lt;li class=&quot;dropdown&quot;&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=18&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;Laptops &amp;amp; Notebooks&lt;/a&gt;&#xd;
+          &lt;div class=&quot;dropdown-menu&quot;&gt;&#xd;
+            &lt;div class=&quot;dropdown-inner&quot;&gt;               &lt;ul class=&quot;list-unstyled&quot;&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=18_46&quot;&gt;Macs (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=18_45&quot;&gt;Windows (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                              &lt;/ul&gt;&#xd;
+              &lt;/div&gt;&#xd;
+            &lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=18&quot; class=&quot;see-all&quot;&gt;Show All Laptops &amp;amp; Notebooks&lt;/a&gt; &lt;/div&gt;&#xd;
+        &lt;/li&gt;&#xd;
+                                &lt;li class=&quot;dropdown&quot;&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=25&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;Components&lt;/a&gt;&#xd;
+          &lt;div class=&quot;dropdown-menu&quot;&gt;&#xd;
+            &lt;div class=&quot;dropdown-inner&quot;&gt;               &lt;ul class=&quot;list-unstyled&quot;&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=25_29&quot;&gt;Mice and Trackballs (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=25_28&quot;&gt;Monitors (2)&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=25_30&quot;&gt;Printers (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=25_31&quot;&gt;Scanners (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=25_32&quot;&gt;Web Cameras (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                              &lt;/ul&gt;&#xd;
+              &lt;/div&gt;&#xd;
+            &lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=25&quot; class=&quot;see-all&quot;&gt;Show All Components&lt;/a&gt; &lt;/div&gt;&#xd;
+        &lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=57&quot;&gt;Tablets&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=17&quot;&gt;Software&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=24&quot;&gt;Phones &amp;amp; PDAs&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=33&quot;&gt;Cameras&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li class=&quot;dropdown&quot;&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=34&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;MP3 Players&lt;/a&gt;&#xd;
+          &lt;div class=&quot;dropdown-menu&quot;&gt;&#xd;
+            &lt;div class=&quot;dropdown-inner&quot;&gt;               &lt;ul class=&quot;list-unstyled&quot;&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=34_43&quot;&gt;test 11 (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=34_44&quot;&gt;test 12 (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=34_47&quot;&gt;test 15 (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=34_48&quot;&gt;test 16 (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=34_49&quot;&gt;test 17 (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                              &lt;/ul&gt;&#xd;
+                            &lt;ul class=&quot;list-unstyled&quot;&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=34_50&quot;&gt;test 18 (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=34_51&quot;&gt;test 19 (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=34_52&quot;&gt;test 20 (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=34_53&quot;&gt;test 21 (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=34_54&quot;&gt;test 22 (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                              &lt;/ul&gt;&#xd;
+                            &lt;ul class=&quot;list-unstyled&quot;&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=34_55&quot;&gt;test 23 (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=34_56&quot;&gt;test 24 (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=34_38&quot;&gt;test 4 (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=34_37&quot;&gt;test 5 (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=34_39&quot;&gt;test 6 (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                              &lt;/ul&gt;&#xd;
+                            &lt;ul class=&quot;list-unstyled&quot;&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=34_40&quot;&gt;test 7 (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=34_41&quot;&gt;test 8 (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=34_42&quot;&gt;test 9 (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                              &lt;/ul&gt;&#xd;
+              &lt;/div&gt;&#xd;
+            &lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=34&quot; class=&quot;see-all&quot;&gt;Show All MP3 Players&lt;/a&gt; &lt;/div&gt;&#xd;
+        &lt;/li&gt;&#xd;
+                      &lt;/ul&gt;&#xd;
+    &lt;/div&gt;&#xd;
+  &lt;/nav&gt;&#xd;
+&lt;/div&gt;&#xd;
+ &#xd;
+&#xd;
+&lt;div id=&quot;common-home&quot; class=&quot;container&quot;&gt;&#xd;
+  &lt;div class=&quot;row&quot;&gt;&#xd;
+                &lt;div id=&quot;content&quot; class=&quot;col-sm-12&quot;&gt;&lt;div class=&quot;swiper-viewport&quot;&gt;&#xd;
+  &lt;div id=&quot;slideshow0&quot; class=&quot;swiper-container&quot;&gt;&#xd;
+    &lt;div class=&quot;swiper-wrapper&quot;&gt;       &lt;div class=&quot;swiper-slide text-center&quot;&gt;&lt;a href=&quot;index.php?route=product/product&amp;amp;path=57&amp;amp;product_id=49&quot;&gt;&lt;img src=&quot;https://opencart.abstracta.us:443/image/cache/catalog/demo/banners/iPhone6-1140x380.jpg&quot; alt=&quot;iPhone 6&quot; class=&quot;img-responsive&quot;/&gt;&lt;/a&gt;&lt;/div&gt;&#xd;
+            &lt;div class=&quot;swiper-slide text-center&quot;&gt;&lt;img src=&quot;https://opencart.abstracta.us:443/image/cache/catalog/demo/banners/MacBookAir-1140x380.jpg&quot; alt=&quot;MacBookAir&quot; class=&quot;img-responsive&quot;/&gt;&lt;/div&gt;&#xd;
+       &lt;/div&gt;&#xd;
+  &lt;/div&gt;&#xd;
+  &lt;div class=&quot;swiper-pagination slideshow0&quot;&gt;&lt;/div&gt;&#xd;
+  &lt;div class=&quot;swiper-pager&quot;&gt;&#xd;
+    &lt;div class=&quot;swiper-button-next&quot;&gt;&lt;/div&gt;&#xd;
+    &lt;div class=&quot;swiper-button-prev&quot;&gt;&lt;/div&gt;&#xd;
+  &lt;/div&gt;&#xd;
+&lt;/div&gt;&#xd;
+&lt;script type=&quot;text/javascript&quot;&gt;$(&apos;#slideshow0&apos;).swiper({mode:&apos;horizontal&apos;,slidesPerView:1,pagination:&apos;.slideshow0&apos;,paginationClickable:true,nextButton:&apos;.swiper-button-next&apos;,prevButton:&apos;.swiper-button-prev&apos;,spaceBetween:30,autoplay:2500,autoplayDisableOnInteraction:true,loop:true});&lt;/script&gt;&#xd;
+&lt;h3&gt;Featured&lt;/h3&gt;&#xd;
+&lt;div class=&quot;row&quot;&gt;&#xd;
+   &lt;div class=&quot;product-layout col-lg-3 col-md-3 col-sm-6 col-xs-12&quot;&gt;&#xd;
+    &lt;div class=&quot;product-thumb transition&quot;&gt;&#xd;
+      &lt;div class=&quot;image&quot;&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/product&amp;amp;product_id=43&quot;&gt;&lt;img src=&quot;https://opencart.abstracta.us:443/image/cache/catalog/demo/macbook_1-200x200.jpg&quot; alt=&quot;MacBook&quot; title=&quot;MacBook&quot; class=&quot;img-responsive&quot;/&gt;&lt;/a&gt;&lt;/div&gt;&#xd;
+      &lt;div class=&quot;caption&quot;&gt;&#xd;
+        &lt;h4&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/product&amp;amp;product_id=43&quot;&gt;MacBook&lt;/a&gt;&lt;/h4&gt;&#xd;
+        &lt;p&gt;&#xd;
+	&#xd;
+		Intel Core 2 Duo processor&#xd;
+	&#xd;
+		Powered by an Intel Core 2 Duo processor at speeds up to 2.1..&lt;/p&gt;&#xd;
+                        &lt;p class=&quot;price&quot;&gt;&#xd;
+                    $602.00&#xd;
+                              &lt;span class=&quot;price-tax&quot;&gt;Ex Tax: $500.00&lt;/span&gt;&#xd;
+                  &lt;/p&gt;&#xd;
+              &lt;/div&gt;&#xd;
+      &lt;div class=&quot;button-group&quot;&gt;&#xd;
+        &lt;button type=&quot;button&quot; onclick=&quot;cart.add(&apos;43&apos;);&quot;&gt;&lt;i class=&quot;fa fa-shopping-cart&quot;&gt;&lt;/i&gt; &lt;span class=&quot;hidden-xs hidden-sm hidden-md&quot;&gt;Add to Cart&lt;/span&gt;&lt;/button&gt;&#xd;
+        &lt;button type=&quot;button&quot; data-toggle=&quot;tooltip&quot; title=&quot;Add to Wish List&quot; onclick=&quot;wishlist.add(&apos;43&apos;);&quot;&gt;&lt;i class=&quot;fa fa-heart&quot;&gt;&lt;/i&gt;&lt;/button&gt;&#xd;
+        &lt;button type=&quot;button&quot; data-toggle=&quot;tooltip&quot; title=&quot;Compare this Product&quot; onclick=&quot;compare.add(&apos;43&apos;);&quot;&gt;&lt;i class=&quot;fa fa-exchange&quot;&gt;&lt;/i&gt;&lt;/button&gt;&#xd;
+      &lt;/div&gt;&#xd;
+    &lt;/div&gt;&#xd;
+  &lt;/div&gt;&#xd;
+    &lt;div class=&quot;product-layout col-lg-3 col-md-3 col-sm-6 col-xs-12&quot;&gt;&#xd;
+    &lt;div class=&quot;product-thumb transition&quot;&gt;&#xd;
+      &lt;div class=&quot;image&quot;&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/product&amp;amp;product_id=40&quot;&gt;&lt;img src=&quot;https://opencart.abstracta.us:443/image/cache/catalog/demo/iphone_1-200x200.jpg&quot; alt=&quot;iPhone&quot; title=&quot;iPhone&quot; class=&quot;img-responsive&quot;/&gt;&lt;/a&gt;&lt;/div&gt;&#xd;
+      &lt;div class=&quot;caption&quot;&gt;&#xd;
+        &lt;h4&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/product&amp;amp;product_id=40&quot;&gt;iPhone&lt;/a&gt;&lt;/h4&gt;&#xd;
+        &lt;p&gt;&#xd;
+	iPhone is a revolutionary new mobile phone that allows you to make a call by simply tapping a nam..&lt;/p&gt;&#xd;
+                        &lt;p class=&quot;price&quot;&gt;&#xd;
+                    $123.20&#xd;
+                              &lt;span class=&quot;price-tax&quot;&gt;Ex Tax: $101.00&lt;/span&gt;&#xd;
+                  &lt;/p&gt;&#xd;
+              &lt;/div&gt;&#xd;
+      &lt;div class=&quot;button-group&quot;&gt;&#xd;
+        &lt;button type=&quot;button&quot; onclick=&quot;cart.add(&apos;40&apos;);&quot;&gt;&lt;i class=&quot;fa fa-shopping-cart&quot;&gt;&lt;/i&gt; &lt;span class=&quot;hidden-xs hidden-sm hidden-md&quot;&gt;Add to Cart&lt;/span&gt;&lt;/button&gt;&#xd;
+        &lt;button type=&quot;button&quot; data-toggle=&quot;tooltip&quot; title=&quot;Add to Wish List&quot; onclick=&quot;wishlist.add(&apos;40&apos;);&quot;&gt;&lt;i class=&quot;fa fa-heart&quot;&gt;&lt;/i&gt;&lt;/button&gt;&#xd;
+        &lt;button type=&quot;button&quot; data-toggle=&quot;tooltip&quot; title=&quot;Compare this Product&quot; onclick=&quot;compare.add(&apos;40&apos;);&quot;&gt;&lt;i class=&quot;fa fa-exchange&quot;&gt;&lt;/i&gt;&lt;/button&gt;&#xd;
+      &lt;/div&gt;&#xd;
+    &lt;/div&gt;&#xd;
+  &lt;/div&gt;&#xd;
+    &lt;div class=&quot;product-layout col-lg-3 col-md-3 col-sm-6 col-xs-12&quot;&gt;&#xd;
+    &lt;div class=&quot;product-thumb transition&quot;&gt;&#xd;
+      &lt;div class=&quot;image&quot;&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/product&amp;amp;product_id=42&quot;&gt;&lt;img src=&quot;https://opencart.abstracta.us:443/image/cache/catalog/demo/apple_cinema_30-200x200.jpg&quot; alt=&quot;Apple Cinema 30&amp;quot;&quot; title=&quot;Apple Cinema 30&amp;quot;&quot; class=&quot;img-responsive&quot;/&gt;&lt;/a&gt;&lt;/div&gt;&#xd;
+      &lt;div class=&quot;caption&quot;&gt;&#xd;
+        &lt;h4&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/product&amp;amp;product_id=42&quot;&gt;Apple Cinema 30&amp;quot;&lt;/a&gt;&lt;/h4&gt;&#xd;
+        &lt;p&gt;&#xd;
+	The 30-inch Apple Cinema HD Display delivers an amazing 2560 x 1600 pixel resolution. Designed sp..&lt;/p&gt;&#xd;
+                        &lt;p class=&quot;price&quot;&gt;&#xd;
+                    &lt;span class=&quot;price-new&quot;&gt;$110.00&lt;/span&gt; &lt;span class=&quot;price-old&quot;&gt;$122.00&lt;/span&gt;&#xd;
+                              &lt;span class=&quot;price-tax&quot;&gt;Ex Tax: $90.00&lt;/span&gt;&#xd;
+                  &lt;/p&gt;&#xd;
+              &lt;/div&gt;&#xd;
+      &lt;div class=&quot;button-group&quot;&gt;&#xd;
+        &lt;button type=&quot;button&quot; onclick=&quot;cart.add(&apos;42&apos;);&quot;&gt;&lt;i class=&quot;fa fa-shopping-cart&quot;&gt;&lt;/i&gt; &lt;span class=&quot;hidden-xs hidden-sm hidden-md&quot;&gt;Add to Cart&lt;/span&gt;&lt;/button&gt;&#xd;
+        &lt;button type=&quot;button&quot; data-toggle=&quot;tooltip&quot; title=&quot;Add to Wish List&quot; onclick=&quot;wishlist.add(&apos;42&apos;);&quot;&gt;&lt;i class=&quot;fa fa-heart&quot;&gt;&lt;/i&gt;&lt;/button&gt;&#xd;
+        &lt;button type=&quot;button&quot; data-toggle=&quot;tooltip&quot; title=&quot;Compare this Product&quot; onclick=&quot;compare.add(&apos;42&apos;);&quot;&gt;&lt;i class=&quot;fa fa-exchange&quot;&gt;&lt;/i&gt;&lt;/button&gt;&#xd;
+      &lt;/div&gt;&#xd;
+    &lt;/div&gt;&#xd;
+  &lt;/div&gt;&#xd;
+    &lt;div class=&quot;product-layout col-lg-3 col-md-3 col-sm-6 col-xs-12&quot;&gt;&#xd;
+    &lt;div class=&quot;product-thumb transition&quot;&gt;&#xd;
+      &lt;div class=&quot;image&quot;&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/product&amp;amp;product_id=30&quot;&gt;&lt;img src=&quot;https://opencart.abstracta.us:443/image/cache/catalog/demo/canon_eos_5d_1-200x200.jpg&quot; alt=&quot;Canon EOS 5D&quot; title=&quot;Canon EOS 5D&quot; class=&quot;img-responsive&quot;/&gt;&lt;/a&gt;&lt;/div&gt;&#xd;
+      &lt;div class=&quot;caption&quot;&gt;&#xd;
+        &lt;h4&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/product&amp;amp;product_id=30&quot;&gt;Canon EOS 5D&lt;/a&gt;&lt;/h4&gt;&#xd;
+        &lt;p&gt;&#xd;
+	Canon&apos;s press material for the EOS 5D states that it &apos;defines (a) new D-SLR category&apos;, while we&apos;r..&lt;/p&gt;&#xd;
+                        &lt;p class=&quot;price&quot;&gt;&#xd;
+                    &lt;span class=&quot;price-new&quot;&gt;$98.00&lt;/span&gt; &lt;span class=&quot;price-old&quot;&gt;$122.00&lt;/span&gt;&#xd;
+                              &lt;span class=&quot;price-tax&quot;&gt;Ex Tax: $80.00&lt;/span&gt;&#xd;
+                  &lt;/p&gt;&#xd;
+              &lt;/div&gt;&#xd;
+      &lt;div class=&quot;button-group&quot;&gt;&#xd;
+        &lt;button type=&quot;button&quot; onclick=&quot;cart.add(&apos;30&apos;);&quot;&gt;&lt;i class=&quot;fa fa-shopping-cart&quot;&gt;&lt;/i&gt; &lt;span class=&quot;hidden-xs hidden-sm hidden-md&quot;&gt;Add to Cart&lt;/span&gt;&lt;/button&gt;&#xd;
+        &lt;button type=&quot;button&quot; data-toggle=&quot;tooltip&quot; title=&quot;Add to Wish List&quot; onclick=&quot;wishlist.add(&apos;30&apos;);&quot;&gt;&lt;i class=&quot;fa fa-heart&quot;&gt;&lt;/i&gt;&lt;/button&gt;&#xd;
+        &lt;button type=&quot;button&quot; data-toggle=&quot;tooltip&quot; title=&quot;Compare this Product&quot; onclick=&quot;compare.add(&apos;30&apos;);&quot;&gt;&lt;i class=&quot;fa fa-exchange&quot;&gt;&lt;/i&gt;&lt;/button&gt;&#xd;
+      &lt;/div&gt;&#xd;
+    &lt;/div&gt;&#xd;
+  &lt;/div&gt;&#xd;
+  &lt;/div&gt;&#xd;
+&#xd;
+&lt;div class=&quot;swiper-viewport&quot;&gt;&#xd;
+  &lt;div id=&quot;carousel0&quot; class=&quot;swiper-container&quot;&gt;&#xd;
+    &lt;div class=&quot;swiper-wrapper&quot;&gt;      &lt;div class=&quot;swiper-slide text-center&quot;&gt;&lt;img src=&quot;https://opencart.abstracta.us:443/image/cache/catalog/demo/manufacturer/nfl-130x100.png&quot; alt=&quot;NFL&quot; class=&quot;img-responsive&quot;/&gt;&lt;/div&gt;&#xd;
+            &lt;div class=&quot;swiper-slide text-center&quot;&gt;&lt;img src=&quot;https://opencart.abstracta.us:443/image/cache/catalog/demo/manufacturer/redbull-130x100.png&quot; alt=&quot;RedBull&quot; class=&quot;img-responsive&quot;/&gt;&lt;/div&gt;&#xd;
+            &lt;div class=&quot;swiper-slide text-center&quot;&gt;&lt;img src=&quot;https://opencart.abstracta.us:443/image/cache/catalog/demo/manufacturer/sony-130x100.png&quot; alt=&quot;Sony&quot; class=&quot;img-responsive&quot;/&gt;&lt;/div&gt;&#xd;
+            &lt;div class=&quot;swiper-slide text-center&quot;&gt;&lt;img src=&quot;https://opencart.abstracta.us:443/image/cache/catalog/demo/manufacturer/cocacola-130x100.png&quot; alt=&quot;Coca Cola&quot; class=&quot;img-responsive&quot;/&gt;&lt;/div&gt;&#xd;
+            &lt;div class=&quot;swiper-slide text-center&quot;&gt;&lt;img src=&quot;https://opencart.abstracta.us:443/image/cache/catalog/demo/manufacturer/burgerking-130x100.png&quot; alt=&quot;Burger King&quot; class=&quot;img-responsive&quot;/&gt;&lt;/div&gt;&#xd;
+            &lt;div class=&quot;swiper-slide text-center&quot;&gt;&lt;img src=&quot;https://opencart.abstracta.us:443/image/cache/catalog/demo/manufacturer/canon-130x100.png&quot; alt=&quot;Canon&quot; class=&quot;img-responsive&quot;/&gt;&lt;/div&gt;&#xd;
+            &lt;div class=&quot;swiper-slide text-center&quot;&gt;&lt;img src=&quot;https://opencart.abstracta.us:443/image/cache/catalog/demo/manufacturer/harley-130x100.png&quot; alt=&quot;Harley Davidson&quot; class=&quot;img-responsive&quot;/&gt;&lt;/div&gt;&#xd;
+            &lt;div class=&quot;swiper-slide text-center&quot;&gt;&lt;img src=&quot;https://opencart.abstracta.us:443/image/cache/catalog/demo/manufacturer/dell-130x100.png&quot; alt=&quot;Dell&quot; class=&quot;img-responsive&quot;/&gt;&lt;/div&gt;&#xd;
+            &lt;div class=&quot;swiper-slide text-center&quot;&gt;&lt;img src=&quot;https://opencart.abstracta.us:443/image/cache/catalog/demo/manufacturer/disney-130x100.png&quot; alt=&quot;Disney&quot; class=&quot;img-responsive&quot;/&gt;&lt;/div&gt;&#xd;
+            &lt;div class=&quot;swiper-slide text-center&quot;&gt;&lt;img src=&quot;https://opencart.abstracta.us:443/image/cache/catalog/demo/manufacturer/starbucks-130x100.png&quot; alt=&quot;Starbucks&quot; class=&quot;img-responsive&quot;/&gt;&lt;/div&gt;&#xd;
+            &lt;div class=&quot;swiper-slide text-center&quot;&gt;&lt;img src=&quot;https://opencart.abstracta.us:443/image/cache/catalog/demo/manufacturer/nintendo-130x100.png&quot; alt=&quot;Nintendo&quot; class=&quot;img-responsive&quot;/&gt;&lt;/div&gt;&#xd;
+      &lt;/div&gt;&#xd;
+  &lt;/div&gt;&#xd;
+  &lt;div class=&quot;swiper-pagination carousel0&quot;&gt;&lt;/div&gt;&#xd;
+  &lt;div class=&quot;swiper-pager&quot;&gt;&#xd;
+    &lt;div class=&quot;swiper-button-next&quot;&gt;&lt;/div&gt;&#xd;
+    &lt;div class=&quot;swiper-button-prev&quot;&gt;&lt;/div&gt;&#xd;
+  &lt;/div&gt;&#xd;
+&lt;/div&gt;&#xd;
+&lt;script type=&quot;text/javascript&quot;&gt;$(&apos;#carousel0&apos;).swiper({mode:&apos;horizontal&apos;,slidesPerView:5,pagination:&apos;.carousel0&apos;,paginationClickable:true,nextButton:&apos;.swiper-button-next&apos;,prevButton:&apos;.swiper-button-prev&apos;,autoplay:2500,loop:true});&lt;/script&gt;&#xd;
+&lt;/div&gt;&#xd;
+    &lt;/div&gt;&#xd;
+&lt;/div&gt;&#xd;
+&lt;footer&gt;&#xd;
+  &lt;div class=&quot;container&quot;&gt;&#xd;
+    &lt;div class=&quot;row&quot;&gt;&#xd;
+            &lt;div class=&quot;col-sm-3&quot;&gt;&#xd;
+        &lt;h5&gt;Information&lt;/h5&gt;&#xd;
+        &lt;ul class=&quot;list-unstyled&quot;&gt;&#xd;
+                   &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=information/information&amp;amp;information_id=4&quot;&gt;About Us&lt;/a&gt;&lt;/li&gt;&#xd;
+                    &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=information/information&amp;amp;information_id=6&quot;&gt;Delivery Information&lt;/a&gt;&lt;/li&gt;&#xd;
+                    &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=information/information&amp;amp;information_id=3&quot;&gt;Privacy Policy&lt;/a&gt;&lt;/li&gt;&#xd;
+                    &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=information/information&amp;amp;information_id=5&quot;&gt;Terms &amp;amp; Conditions&lt;/a&gt;&lt;/li&gt;&#xd;
+                  &lt;/ul&gt;&#xd;
+      &lt;/div&gt;&#xd;
+            &lt;div class=&quot;col-sm-3&quot;&gt;&#xd;
+        &lt;h5&gt;Customer Service&lt;/h5&gt;&#xd;
+        &lt;ul class=&quot;list-unstyled&quot;&gt;&#xd;
+          &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=information/contact&quot;&gt;Contact Us&lt;/a&gt;&lt;/li&gt;&#xd;
+          &lt;li&gt;&lt;a href=&quot;https://opencart.abstracta.us:443/index.php?route=account/return/add&quot;&gt;Returns&lt;/a&gt;&lt;/li&gt;&#xd;
+          &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=information/sitemap&quot;&gt;Site Map&lt;/a&gt;&lt;/li&gt;&#xd;
+        &lt;/ul&gt;&#xd;
+      &lt;/div&gt;&#xd;
+      &lt;div class=&quot;col-sm-3&quot;&gt;&#xd;
+        &lt;h5&gt;Extras&lt;/h5&gt;&#xd;
+        &lt;ul class=&quot;list-unstyled&quot;&gt;&#xd;
+          &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/manufacturer&quot;&gt;Brands&lt;/a&gt;&lt;/li&gt;&#xd;
+          &lt;li&gt;&lt;a href=&quot;https://opencart.abstracta.us:443/index.php?route=account/voucher&quot;&gt;Gift Certificates&lt;/a&gt;&lt;/li&gt;&#xd;
+          &lt;li&gt;&lt;a href=&quot;https://opencart.abstracta.us:443/index.php?route=affiliate/login&quot;&gt;Affiliate&lt;/a&gt;&lt;/li&gt;&#xd;
+          &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/special&quot;&gt;Specials&lt;/a&gt;&lt;/li&gt;&#xd;
+        &lt;/ul&gt;&#xd;
+      &lt;/div&gt;&#xd;
+      &lt;div class=&quot;col-sm-3&quot;&gt;&#xd;
+        &lt;h5&gt;My Account&lt;/h5&gt;&#xd;
+        &lt;ul class=&quot;list-unstyled&quot;&gt;&#xd;
+          &lt;li&gt;&lt;a href=&quot;https://opencart.abstracta.us:443/index.php?route=account/account&quot;&gt;My Account&lt;/a&gt;&lt;/li&gt;&#xd;
+          &lt;li&gt;&lt;a href=&quot;https://opencart.abstracta.us:443/index.php?route=account/order&quot;&gt;Order History&lt;/a&gt;&lt;/li&gt;&#xd;
+          &lt;li&gt;&lt;a href=&quot;https://opencart.abstracta.us:443/index.php?route=account/wishlist&quot;&gt;Wish List&lt;/a&gt;&lt;/li&gt;&#xd;
+          &lt;li&gt;&lt;a href=&quot;https://opencart.abstracta.us:443/index.php?route=account/newsletter&quot;&gt;Newsletter&lt;/a&gt;&lt;/li&gt;&#xd;
+        &lt;/ul&gt;&#xd;
+      &lt;/div&gt;&#xd;
+    &lt;/div&gt;&#xd;
+    &lt;hr&gt;&#xd;
+    &lt;p&gt;Powered By &lt;a href=&quot;http://www.opencart.com&quot;&gt;OpenCart&lt;/a&gt;&lt;br/&gt; Your Store &amp;copy; 2022&lt;/p&gt;&#xd;
+  &lt;/div&gt;&#xd;
+&lt;/footer&gt;&#xd;
+&lt;!--&#xd;
+OpenCart is open source software and you are free to remove the powered by OpenCart if you want, but its generally accepted practise to make a small donation.&#xd;
+Please donate via PayPal to donate@opencart.com&#xd;
+//--&gt;&#xd;
+  &lt;div id=&quot;bitnami-banner&quot; data-banner-id=&quot;d32a9&quot;&gt;  &lt;style&gt;#bitnami-banner{z-index:100000;height:80px;padding:0;width:120px;background:transparent;position:fixed;right:0;bottom:0;border:0 solid #ededed}#bitnami-banner .bitnami-corner-image-div{position:fixed;right:0;bottom:0;border:0;z-index:100001;height:110px}#bitnami-banner .bitnami-corner-image-div .bitnami-corner-image{position:fixed;right:0;bottom:0;border:0;z-index:100001;height:110px}#bitnami-close-banner-button{height:12px;width:12px;z-index:10000000000;position:fixed;right:5px;bottom:65px;display:none;cursor:pointer}&lt;/style&gt;  &lt;img id=&quot;bitnami-close-banner-button&quot; src=&quot;/bitnami/images/close.png&quot;/&gt;  &lt;div class=&quot;bitnami-corner-image-div&quot;&gt;     &lt;a href=&quot;/bitnami/index.html&quot; target=&quot;_blank&quot;&gt;       &lt;img class=&quot;bitnami-corner-image&quot; alt=&quot;Bitnami&quot; src=&quot;/bitnami/images/corner-logo.png&quot;/&gt;     &lt;/a&gt;  &lt;/div&gt;  &lt;script type=&quot;text/javascript&quot; src=&quot;/bitnami/banner.js&quot;&gt;&lt;/script&gt; &lt;/div&gt;   &lt;/body&gt;&lt;/html&gt;</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">opencart.abstracta.us/</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path"></stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <ResultCollector guiclass="GraphVisualizer" testclass="ResultCollector" testname="Graph Results" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="picos" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">100</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">10</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">&lt;!DOCTYPE html&gt;&#xd;
+&lt;!--[if IE]&gt;&lt;![endif]--&gt;&#xd;
+&lt;!--[if IE 8 ]&gt;&lt;html dir=&quot;ltr&quot; lang=&quot;en&quot; class=&quot;ie8&quot;&gt;&lt;![endif]--&gt;&#xd;
+&lt;!--[if IE 9 ]&gt;&lt;html dir=&quot;ltr&quot; lang=&quot;en&quot; class=&quot;ie9&quot;&gt;&lt;![endif]--&gt;&#xd;
+&lt;!--[if (gt IE 9)|!(IE)]&gt;&lt;!--&gt;&#xd;
+&lt;html dir=&quot;ltr&quot; lang=&quot;en&quot;&gt;&#xd;
+&lt;!--&lt;![endif]--&gt;&#xd;
+&lt;head&gt;&#xd;
+&lt;meta charset=&quot;UTF-8&quot;/&gt;&#xd;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;&#xd;
+&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;&#xd;
+&lt;title&gt;Your Store&lt;/title&gt;&#xd;
+&lt;base href=&quot;https://opencart.abstracta.us:443/&quot;/&gt;&#xd;
+&lt;meta name=&quot;description&quot; content=&quot;My Store&quot;/&gt;&#xd;
+&lt;script src=&quot;catalog/view/javascript/jquery/jquery-2.1.1.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;&#xd;
+&lt;link href=&quot;catalog/view/javascript/bootstrap/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; media=&quot;screen&quot;/&gt;&#xd;
+&lt;script src=&quot;catalog/view/javascript/bootstrap/js/bootstrap.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;&#xd;
+&lt;link href=&quot;catalog/view/javascript/font-awesome/css/font-awesome.min.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;/&gt;&#xd;
+&lt;link href=&quot;//fonts.googleapis.com/css?family=Open+Sans:400,400i,300,700&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;/&gt;&#xd;
+&lt;link href=&quot;catalog/view/theme/default/stylesheet/stylesheet.css&quot; rel=&quot;stylesheet&quot;&gt;&#xd;
+&lt;link href=&quot;catalog/view/javascript/jquery/swiper/css/swiper.min.css&quot; type=&quot;text/css&quot; rel=&quot;stylesheet&quot; media=&quot;screen&quot;/&gt;&#xd;
+&lt;link href=&quot;catalog/view/javascript/jquery/swiper/css/opencart.css&quot; type=&quot;text/css&quot; rel=&quot;stylesheet&quot; media=&quot;screen&quot;/&gt;&#xd;
+&lt;script src=&quot;catalog/view/javascript/jquery/swiper/js/swiper.jquery.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;&#xd;
+&lt;script src=&quot;catalog/view/javascript/common.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;&#xd;
+&lt;link href=&quot;https://opencart.abstracta.us:443/image/catalog/cart.png&quot; rel=&quot;icon&quot;/&gt;&#xd;
+&lt;/head&gt;&#xd;
+&lt;body&gt;&#xd;
+&lt;nav id=&quot;top&quot;&gt;&#xd;
+  &lt;div class=&quot;container&quot;&gt;&lt;div class=&quot;pull-left&quot;&gt;&#xd;
+  &lt;form action=&quot;https://opencart.abstracta.us:443/index.php?route=common/currency/currency&quot; method=&quot;post&quot; enctype=&quot;multipart/form-data&quot; id=&quot;form-currency&quot;&gt;&#xd;
+    &lt;div class=&quot;btn-group&quot;&gt;&#xd;
+      &lt;button class=&quot;btn btn-link dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;                               &lt;strong&gt;$&lt;/strong&gt;        &lt;span class=&quot;hidden-xs hidden-sm hidden-md&quot;&gt;Currency&lt;/span&gt;&amp;nbsp;&lt;i class=&quot;fa fa-caret-down&quot;&gt;&lt;/i&gt;&lt;/button&gt;&#xd;
+      &lt;ul class=&quot;dropdown-menu&quot;&gt;&#xd;
+                        &lt;li&gt;&#xd;
+          &lt;button class=&quot;currency-select btn btn-link btn-block&quot; type=&quot;button&quot; name=&quot;EUR&quot;&gt;€ Euro&lt;/button&gt;&#xd;
+        &lt;/li&gt;&#xd;
+                                &lt;li&gt;&#xd;
+          &lt;button class=&quot;currency-select btn btn-link btn-block&quot; type=&quot;button&quot; name=&quot;GBP&quot;&gt;£ Pound Sterling&lt;/button&gt;&#xd;
+        &lt;/li&gt;&#xd;
+                                &lt;li&gt;&#xd;
+          &lt;button class=&quot;currency-select btn btn-link btn-block&quot; type=&quot;button&quot; name=&quot;USD&quot;&gt;$ US Dollar&lt;/button&gt;&#xd;
+        &lt;/li&gt;&#xd;
+                      &lt;/ul&gt;&#xd;
+    &lt;/div&gt;&#xd;
+    &lt;input type=&quot;hidden&quot; name=&quot;code&quot; value=&quot;&quot;/&gt;&#xd;
+    &lt;input type=&quot;hidden&quot; name=&quot;redirect&quot; value=&quot;http://opencart.abstracta.us:80/index.php?route=common/home&quot;/&gt;&#xd;
+  &lt;/form&gt;&#xd;
+&lt;/div&gt;&#xd;
+ &#xd;
+    &#xd;
+    &lt;div id=&quot;top-links&quot; class=&quot;nav pull-right&quot;&gt;&#xd;
+      &lt;ul class=&quot;list-inline&quot;&gt;&#xd;
+        &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=information/contact&quot;&gt;&lt;i class=&quot;fa fa-phone&quot;&gt;&lt;/i&gt;&lt;/a&gt; &lt;span class=&quot;hidden-xs hidden-sm hidden-md&quot;&gt;123456789&lt;/span&gt;&lt;/li&gt;&#xd;
+        &lt;li class=&quot;dropdown&quot;&gt;&lt;a href=&quot;https://opencart.abstracta.us:443/index.php?route=account/account&quot; title=&quot;My Account&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;&lt;i class=&quot;fa fa-user&quot;&gt;&lt;/i&gt; &lt;span class=&quot;hidden-xs hidden-sm hidden-md&quot;&gt;My Account&lt;/span&gt; &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/a&gt;&#xd;
+          &lt;ul class=&quot;dropdown-menu dropdown-menu-right&quot;&gt;&#xd;
+                        &lt;li&gt;&lt;a href=&quot;https://opencart.abstracta.us:443/index.php?route=account/register&quot;&gt;Register&lt;/a&gt;&lt;/li&gt;&#xd;
+            &lt;li&gt;&lt;a href=&quot;https://opencart.abstracta.us:443/index.php?route=account/login&quot;&gt;Login&lt;/a&gt;&lt;/li&gt;&#xd;
+                      &lt;/ul&gt;&#xd;
+        &lt;/li&gt;&#xd;
+        &lt;li&gt;&lt;a href=&quot;https://opencart.abstracta.us:443/index.php?route=account/wishlist&quot; id=&quot;wishlist-total&quot; title=&quot;Wish List (0)&quot;&gt;&lt;i class=&quot;fa fa-heart&quot;&gt;&lt;/i&gt; &lt;span class=&quot;hidden-xs hidden-sm hidden-md&quot;&gt;Wish List (0)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&#xd;
+        &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=checkout/cart&quot; title=&quot;Shopping Cart&quot;&gt;&lt;i class=&quot;fa fa-shopping-cart&quot;&gt;&lt;/i&gt; &lt;span class=&quot;hidden-xs hidden-sm hidden-md&quot;&gt;Shopping Cart&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&#xd;
+        &lt;li&gt;&lt;a href=&quot;https://opencart.abstracta.us:443/index.php?route=checkout/checkout&quot; title=&quot;Checkout&quot;&gt;&lt;i class=&quot;fa fa-share&quot;&gt;&lt;/i&gt; &lt;span class=&quot;hidden-xs hidden-sm hidden-md&quot;&gt;Checkout&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&#xd;
+      &lt;/ul&gt;&#xd;
+    &lt;/div&gt;&#xd;
+  &lt;/div&gt;&#xd;
+&lt;/nav&gt;&#xd;
+&lt;header&gt;&#xd;
+  &lt;div class=&quot;container&quot;&gt;&#xd;
+    &lt;div class=&quot;row&quot;&gt;&#xd;
+      &lt;div class=&quot;col-sm-4&quot;&gt;&#xd;
+        &lt;div id=&quot;logo&quot;&gt;          &lt;h1&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=common/home&quot;&gt;Your Store&lt;/a&gt;&lt;/h1&gt;&#xd;
+          &lt;/div&gt;&#xd;
+      &lt;/div&gt;&#xd;
+      &lt;div class=&quot;col-sm-5&quot;&gt;&lt;div id=&quot;search&quot; class=&quot;input-group&quot;&gt;&#xd;
+  &lt;input type=&quot;text&quot; name=&quot;search&quot; value=&quot;&quot; placeholder=&quot;Search&quot; class=&quot;form-control input-lg&quot;/&gt;&#xd;
+  &lt;span class=&quot;input-group-btn&quot;&gt;&#xd;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-default btn-lg&quot;&gt;&lt;i class=&quot;fa fa-search&quot;&gt;&lt;/i&gt;&lt;/button&gt;&#xd;
+  &lt;/span&gt;&#xd;
+&lt;/div&gt;&lt;/div&gt;&#xd;
+      &lt;div class=&quot;col-sm-3&quot;&gt;&lt;div id=&quot;cart&quot; class=&quot;btn-group btn-block&quot;&gt;&#xd;
+  &lt;button type=&quot;button&quot; data-toggle=&quot;dropdown&quot; data-loading-text=&quot;Loading...&quot; class=&quot;btn btn-inverse btn-block btn-lg dropdown-toggle&quot;&gt;&lt;i class=&quot;fa fa-shopping-cart&quot;&gt;&lt;/i&gt; &lt;span id=&quot;cart-total&quot;&gt;0 item(s) - $0.00&lt;/span&gt;&lt;/button&gt;&#xd;
+  &lt;ul class=&quot;dropdown-menu pull-right&quot;&gt;&#xd;
+        &lt;li&gt;&#xd;
+      &lt;p class=&quot;text-center&quot;&gt;Your shopping cart is empty!&lt;/p&gt;&#xd;
+    &lt;/li&gt;&#xd;
+      &lt;/ul&gt;&#xd;
+&lt;/div&gt;&#xd;
+&lt;/div&gt;&#xd;
+    &lt;/div&gt;&#xd;
+  &lt;/div&gt;&#xd;
+&lt;/header&gt;&#xd;
+&lt;div class=&quot;container&quot;&gt;&#xd;
+  &lt;nav id=&quot;menu&quot; class=&quot;navbar&quot;&gt;&#xd;
+    &lt;div class=&quot;navbar-header&quot;&gt;&lt;span id=&quot;category&quot; class=&quot;visible-xs&quot;&gt;Categories&lt;/span&gt;&#xd;
+      &lt;button type=&quot;button&quot; class=&quot;btn btn-navbar navbar-toggle&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.navbar-ex1-collapse&quot;&gt;&lt;i class=&quot;fa fa-bars&quot;&gt;&lt;/i&gt;&lt;/button&gt;&#xd;
+    &lt;/div&gt;&#xd;
+    &lt;div class=&quot;collapse navbar-collapse navbar-ex1-collapse&quot;&gt;&#xd;
+      &lt;ul class=&quot;nav navbar-nav&quot;&gt;&#xd;
+                        &lt;li class=&quot;dropdown&quot;&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=20&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;Desktops&lt;/a&gt;&#xd;
+          &lt;div class=&quot;dropdown-menu&quot;&gt;&#xd;
+            &lt;div class=&quot;dropdown-inner&quot;&gt;               &lt;ul class=&quot;list-unstyled&quot;&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=20_26&quot;&gt;PC (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=20_27&quot;&gt;Mac (1)&lt;/a&gt;&lt;/li&gt;&#xd;
+                              &lt;/ul&gt;&#xd;
+              &lt;/div&gt;&#xd;
+            &lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=20&quot; class=&quot;see-all&quot;&gt;Show All Desktops&lt;/a&gt; &lt;/div&gt;&#xd;
+        &lt;/li&gt;&#xd;
+                                &lt;li class=&quot;dropdown&quot;&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=18&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;Laptops &amp;amp; Notebooks&lt;/a&gt;&#xd;
+          &lt;div class=&quot;dropdown-menu&quot;&gt;&#xd;
+            &lt;div class=&quot;dropdown-inner&quot;&gt;               &lt;ul class=&quot;list-unstyled&quot;&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=18_46&quot;&gt;Macs (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=18_45&quot;&gt;Windows (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                              &lt;/ul&gt;&#xd;
+              &lt;/div&gt;&#xd;
+            &lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=18&quot; class=&quot;see-all&quot;&gt;Show All Laptops &amp;amp; Notebooks&lt;/a&gt; &lt;/div&gt;&#xd;
+        &lt;/li&gt;&#xd;
+                                &lt;li class=&quot;dropdown&quot;&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=25&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;Components&lt;/a&gt;&#xd;
+          &lt;div class=&quot;dropdown-menu&quot;&gt;&#xd;
+            &lt;div class=&quot;dropdown-inner&quot;&gt;               &lt;ul class=&quot;list-unstyled&quot;&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=25_29&quot;&gt;Mice and Trackballs (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=25_28&quot;&gt;Monitors (2)&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=25_30&quot;&gt;Printers (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=25_31&quot;&gt;Scanners (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=25_32&quot;&gt;Web Cameras (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                              &lt;/ul&gt;&#xd;
+              &lt;/div&gt;&#xd;
+            &lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=25&quot; class=&quot;see-all&quot;&gt;Show All Components&lt;/a&gt; &lt;/div&gt;&#xd;
+        &lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=57&quot;&gt;Tablets&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=17&quot;&gt;Software&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=24&quot;&gt;Phones &amp;amp; PDAs&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=33&quot;&gt;Cameras&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li class=&quot;dropdown&quot;&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=34&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;MP3 Players&lt;/a&gt;&#xd;
+          &lt;div class=&quot;dropdown-menu&quot;&gt;&#xd;
+            &lt;div class=&quot;dropdown-inner&quot;&gt;               &lt;ul class=&quot;list-unstyled&quot;&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=34_43&quot;&gt;test 11 (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=34_44&quot;&gt;test 12 (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=34_47&quot;&gt;test 15 (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=34_48&quot;&gt;test 16 (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=34_49&quot;&gt;test 17 (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                              &lt;/ul&gt;&#xd;
+                            &lt;ul class=&quot;list-unstyled&quot;&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=34_50&quot;&gt;test 18 (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=34_51&quot;&gt;test 19 (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=34_52&quot;&gt;test 20 (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=34_53&quot;&gt;test 21 (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=34_54&quot;&gt;test 22 (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                              &lt;/ul&gt;&#xd;
+                            &lt;ul class=&quot;list-unstyled&quot;&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=34_55&quot;&gt;test 23 (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=34_56&quot;&gt;test 24 (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=34_38&quot;&gt;test 4 (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=34_37&quot;&gt;test 5 (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=34_39&quot;&gt;test 6 (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                              &lt;/ul&gt;&#xd;
+                            &lt;ul class=&quot;list-unstyled&quot;&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=34_40&quot;&gt;test 7 (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=34_41&quot;&gt;test 8 (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                                &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=34_42&quot;&gt;test 9 (0)&lt;/a&gt;&lt;/li&gt;&#xd;
+                              &lt;/ul&gt;&#xd;
+              &lt;/div&gt;&#xd;
+            &lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/category&amp;amp;path=34&quot; class=&quot;see-all&quot;&gt;Show All MP3 Players&lt;/a&gt; &lt;/div&gt;&#xd;
+        &lt;/li&gt;&#xd;
+                      &lt;/ul&gt;&#xd;
+    &lt;/div&gt;&#xd;
+  &lt;/nav&gt;&#xd;
+&lt;/div&gt;&#xd;
+ &#xd;
+&#xd;
+&lt;div id=&quot;common-home&quot; class=&quot;container&quot;&gt;&#xd;
+  &lt;div class=&quot;row&quot;&gt;&#xd;
+                &lt;div id=&quot;content&quot; class=&quot;col-sm-12&quot;&gt;&lt;div class=&quot;swiper-viewport&quot;&gt;&#xd;
+  &lt;div id=&quot;slideshow0&quot; class=&quot;swiper-container&quot;&gt;&#xd;
+    &lt;div class=&quot;swiper-wrapper&quot;&gt;       &lt;div class=&quot;swiper-slide text-center&quot;&gt;&lt;a href=&quot;index.php?route=product/product&amp;amp;path=57&amp;amp;product_id=49&quot;&gt;&lt;img src=&quot;https://opencart.abstracta.us:443/image/cache/catalog/demo/banners/iPhone6-1140x380.jpg&quot; alt=&quot;iPhone 6&quot; class=&quot;img-responsive&quot;/&gt;&lt;/a&gt;&lt;/div&gt;&#xd;
+            &lt;div class=&quot;swiper-slide text-center&quot;&gt;&lt;img src=&quot;https://opencart.abstracta.us:443/image/cache/catalog/demo/banners/MacBookAir-1140x380.jpg&quot; alt=&quot;MacBookAir&quot; class=&quot;img-responsive&quot;/&gt;&lt;/div&gt;&#xd;
+       &lt;/div&gt;&#xd;
+  &lt;/div&gt;&#xd;
+  &lt;div class=&quot;swiper-pagination slideshow0&quot;&gt;&lt;/div&gt;&#xd;
+  &lt;div class=&quot;swiper-pager&quot;&gt;&#xd;
+    &lt;div class=&quot;swiper-button-next&quot;&gt;&lt;/div&gt;&#xd;
+    &lt;div class=&quot;swiper-button-prev&quot;&gt;&lt;/div&gt;&#xd;
+  &lt;/div&gt;&#xd;
+&lt;/div&gt;&#xd;
+&lt;script type=&quot;text/javascript&quot;&gt;$(&apos;#slideshow0&apos;).swiper({mode:&apos;horizontal&apos;,slidesPerView:1,pagination:&apos;.slideshow0&apos;,paginationClickable:true,nextButton:&apos;.swiper-button-next&apos;,prevButton:&apos;.swiper-button-prev&apos;,spaceBetween:30,autoplay:2500,autoplayDisableOnInteraction:true,loop:true});&lt;/script&gt;&#xd;
+&lt;h3&gt;Featured&lt;/h3&gt;&#xd;
+&lt;div class=&quot;row&quot;&gt;&#xd;
+   &lt;div class=&quot;product-layout col-lg-3 col-md-3 col-sm-6 col-xs-12&quot;&gt;&#xd;
+    &lt;div class=&quot;product-thumb transition&quot;&gt;&#xd;
+      &lt;div class=&quot;image&quot;&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/product&amp;amp;product_id=43&quot;&gt;&lt;img src=&quot;https://opencart.abstracta.us:443/image/cache/catalog/demo/macbook_1-200x200.jpg&quot; alt=&quot;MacBook&quot; title=&quot;MacBook&quot; class=&quot;img-responsive&quot;/&gt;&lt;/a&gt;&lt;/div&gt;&#xd;
+      &lt;div class=&quot;caption&quot;&gt;&#xd;
+        &lt;h4&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/product&amp;amp;product_id=43&quot;&gt;MacBook&lt;/a&gt;&lt;/h4&gt;&#xd;
+        &lt;p&gt;&#xd;
+	&#xd;
+		Intel Core 2 Duo processor&#xd;
+	&#xd;
+		Powered by an Intel Core 2 Duo processor at speeds up to 2.1..&lt;/p&gt;&#xd;
+                        &lt;p class=&quot;price&quot;&gt;&#xd;
+                    $602.00&#xd;
+                              &lt;span class=&quot;price-tax&quot;&gt;Ex Tax: $500.00&lt;/span&gt;&#xd;
+                  &lt;/p&gt;&#xd;
+              &lt;/div&gt;&#xd;
+      &lt;div class=&quot;button-group&quot;&gt;&#xd;
+        &lt;button type=&quot;button&quot; onclick=&quot;cart.add(&apos;43&apos;);&quot;&gt;&lt;i class=&quot;fa fa-shopping-cart&quot;&gt;&lt;/i&gt; &lt;span class=&quot;hidden-xs hidden-sm hidden-md&quot;&gt;Add to Cart&lt;/span&gt;&lt;/button&gt;&#xd;
+        &lt;button type=&quot;button&quot; data-toggle=&quot;tooltip&quot; title=&quot;Add to Wish List&quot; onclick=&quot;wishlist.add(&apos;43&apos;);&quot;&gt;&lt;i class=&quot;fa fa-heart&quot;&gt;&lt;/i&gt;&lt;/button&gt;&#xd;
+        &lt;button type=&quot;button&quot; data-toggle=&quot;tooltip&quot; title=&quot;Compare this Product&quot; onclick=&quot;compare.add(&apos;43&apos;);&quot;&gt;&lt;i class=&quot;fa fa-exchange&quot;&gt;&lt;/i&gt;&lt;/button&gt;&#xd;
+      &lt;/div&gt;&#xd;
+    &lt;/div&gt;&#xd;
+  &lt;/div&gt;&#xd;
+    &lt;div class=&quot;product-layout col-lg-3 col-md-3 col-sm-6 col-xs-12&quot;&gt;&#xd;
+    &lt;div class=&quot;product-thumb transition&quot;&gt;&#xd;
+      &lt;div class=&quot;image&quot;&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/product&amp;amp;product_id=40&quot;&gt;&lt;img src=&quot;https://opencart.abstracta.us:443/image/cache/catalog/demo/iphone_1-200x200.jpg&quot; alt=&quot;iPhone&quot; title=&quot;iPhone&quot; class=&quot;img-responsive&quot;/&gt;&lt;/a&gt;&lt;/div&gt;&#xd;
+      &lt;div class=&quot;caption&quot;&gt;&#xd;
+        &lt;h4&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/product&amp;amp;product_id=40&quot;&gt;iPhone&lt;/a&gt;&lt;/h4&gt;&#xd;
+        &lt;p&gt;&#xd;
+	iPhone is a revolutionary new mobile phone that allows you to make a call by simply tapping a nam..&lt;/p&gt;&#xd;
+                        &lt;p class=&quot;price&quot;&gt;&#xd;
+                    $123.20&#xd;
+                              &lt;span class=&quot;price-tax&quot;&gt;Ex Tax: $101.00&lt;/span&gt;&#xd;
+                  &lt;/p&gt;&#xd;
+              &lt;/div&gt;&#xd;
+      &lt;div class=&quot;button-group&quot;&gt;&#xd;
+        &lt;button type=&quot;button&quot; onclick=&quot;cart.add(&apos;40&apos;);&quot;&gt;&lt;i class=&quot;fa fa-shopping-cart&quot;&gt;&lt;/i&gt; &lt;span class=&quot;hidden-xs hidden-sm hidden-md&quot;&gt;Add to Cart&lt;/span&gt;&lt;/button&gt;&#xd;
+        &lt;button type=&quot;button&quot; data-toggle=&quot;tooltip&quot; title=&quot;Add to Wish List&quot; onclick=&quot;wishlist.add(&apos;40&apos;);&quot;&gt;&lt;i class=&quot;fa fa-heart&quot;&gt;&lt;/i&gt;&lt;/button&gt;&#xd;
+        &lt;button type=&quot;button&quot; data-toggle=&quot;tooltip&quot; title=&quot;Compare this Product&quot; onclick=&quot;compare.add(&apos;40&apos;);&quot;&gt;&lt;i class=&quot;fa fa-exchange&quot;&gt;&lt;/i&gt;&lt;/button&gt;&#xd;
+      &lt;/div&gt;&#xd;
+    &lt;/div&gt;&#xd;
+  &lt;/div&gt;&#xd;
+    &lt;div class=&quot;product-layout col-lg-3 col-md-3 col-sm-6 col-xs-12&quot;&gt;&#xd;
+    &lt;div class=&quot;product-thumb transition&quot;&gt;&#xd;
+      &lt;div class=&quot;image&quot;&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/product&amp;amp;product_id=42&quot;&gt;&lt;img src=&quot;https://opencart.abstracta.us:443/image/cache/catalog/demo/apple_cinema_30-200x200.jpg&quot; alt=&quot;Apple Cinema 30&amp;quot;&quot; title=&quot;Apple Cinema 30&amp;quot;&quot; class=&quot;img-responsive&quot;/&gt;&lt;/a&gt;&lt;/div&gt;&#xd;
+      &lt;div class=&quot;caption&quot;&gt;&#xd;
+        &lt;h4&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/product&amp;amp;product_id=42&quot;&gt;Apple Cinema 30&amp;quot;&lt;/a&gt;&lt;/h4&gt;&#xd;
+        &lt;p&gt;&#xd;
+	The 30-inch Apple Cinema HD Display delivers an amazing 2560 x 1600 pixel resolution. Designed sp..&lt;/p&gt;&#xd;
+                        &lt;p class=&quot;price&quot;&gt;&#xd;
+                    &lt;span class=&quot;price-new&quot;&gt;$110.00&lt;/span&gt; &lt;span class=&quot;price-old&quot;&gt;$122.00&lt;/span&gt;&#xd;
+                              &lt;span class=&quot;price-tax&quot;&gt;Ex Tax: $90.00&lt;/span&gt;&#xd;
+                  &lt;/p&gt;&#xd;
+              &lt;/div&gt;&#xd;
+      &lt;div class=&quot;button-group&quot;&gt;&#xd;
+        &lt;button type=&quot;button&quot; onclick=&quot;cart.add(&apos;42&apos;);&quot;&gt;&lt;i class=&quot;fa fa-shopping-cart&quot;&gt;&lt;/i&gt; &lt;span class=&quot;hidden-xs hidden-sm hidden-md&quot;&gt;Add to Cart&lt;/span&gt;&lt;/button&gt;&#xd;
+        &lt;button type=&quot;button&quot; data-toggle=&quot;tooltip&quot; title=&quot;Add to Wish List&quot; onclick=&quot;wishlist.add(&apos;42&apos;);&quot;&gt;&lt;i class=&quot;fa fa-heart&quot;&gt;&lt;/i&gt;&lt;/button&gt;&#xd;
+        &lt;button type=&quot;button&quot; data-toggle=&quot;tooltip&quot; title=&quot;Compare this Product&quot; onclick=&quot;compare.add(&apos;42&apos;);&quot;&gt;&lt;i class=&quot;fa fa-exchange&quot;&gt;&lt;/i&gt;&lt;/button&gt;&#xd;
+      &lt;/div&gt;&#xd;
+    &lt;/div&gt;&#xd;
+  &lt;/div&gt;&#xd;
+    &lt;div class=&quot;product-layout col-lg-3 col-md-3 col-sm-6 col-xs-12&quot;&gt;&#xd;
+    &lt;div class=&quot;product-thumb transition&quot;&gt;&#xd;
+      &lt;div class=&quot;image&quot;&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/product&amp;amp;product_id=30&quot;&gt;&lt;img src=&quot;https://opencart.abstracta.us:443/image/cache/catalog/demo/canon_eos_5d_1-200x200.jpg&quot; alt=&quot;Canon EOS 5D&quot; title=&quot;Canon EOS 5D&quot; class=&quot;img-responsive&quot;/&gt;&lt;/a&gt;&lt;/div&gt;&#xd;
+      &lt;div class=&quot;caption&quot;&gt;&#xd;
+        &lt;h4&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/product&amp;amp;product_id=30&quot;&gt;Canon EOS 5D&lt;/a&gt;&lt;/h4&gt;&#xd;
+        &lt;p&gt;&#xd;
+	Canon&apos;s press material for the EOS 5D states that it &apos;defines (a) new D-SLR category&apos;, while we&apos;r..&lt;/p&gt;&#xd;
+                        &lt;p class=&quot;price&quot;&gt;&#xd;
+                    &lt;span class=&quot;price-new&quot;&gt;$98.00&lt;/span&gt; &lt;span class=&quot;price-old&quot;&gt;$122.00&lt;/span&gt;&#xd;
+                              &lt;span class=&quot;price-tax&quot;&gt;Ex Tax: $80.00&lt;/span&gt;&#xd;
+                  &lt;/p&gt;&#xd;
+              &lt;/div&gt;&#xd;
+      &lt;div class=&quot;button-group&quot;&gt;&#xd;
+        &lt;button type=&quot;button&quot; onclick=&quot;cart.add(&apos;30&apos;);&quot;&gt;&lt;i class=&quot;fa fa-shopping-cart&quot;&gt;&lt;/i&gt; &lt;span class=&quot;hidden-xs hidden-sm hidden-md&quot;&gt;Add to Cart&lt;/span&gt;&lt;/button&gt;&#xd;
+        &lt;button type=&quot;button&quot; data-toggle=&quot;tooltip&quot; title=&quot;Add to Wish List&quot; onclick=&quot;wishlist.add(&apos;30&apos;);&quot;&gt;&lt;i class=&quot;fa fa-heart&quot;&gt;&lt;/i&gt;&lt;/button&gt;&#xd;
+        &lt;button type=&quot;button&quot; data-toggle=&quot;tooltip&quot; title=&quot;Compare this Product&quot; onclick=&quot;compare.add(&apos;30&apos;);&quot;&gt;&lt;i class=&quot;fa fa-exchange&quot;&gt;&lt;/i&gt;&lt;/button&gt;&#xd;
+      &lt;/div&gt;&#xd;
+    &lt;/div&gt;&#xd;
+  &lt;/div&gt;&#xd;
+  &lt;/div&gt;&#xd;
+&#xd;
+&lt;div class=&quot;swiper-viewport&quot;&gt;&#xd;
+  &lt;div id=&quot;carousel0&quot; class=&quot;swiper-container&quot;&gt;&#xd;
+    &lt;div class=&quot;swiper-wrapper&quot;&gt;      &lt;div class=&quot;swiper-slide text-center&quot;&gt;&lt;img src=&quot;https://opencart.abstracta.us:443/image/cache/catalog/demo/manufacturer/nfl-130x100.png&quot; alt=&quot;NFL&quot; class=&quot;img-responsive&quot;/&gt;&lt;/div&gt;&#xd;
+            &lt;div class=&quot;swiper-slide text-center&quot;&gt;&lt;img src=&quot;https://opencart.abstracta.us:443/image/cache/catalog/demo/manufacturer/redbull-130x100.png&quot; alt=&quot;RedBull&quot; class=&quot;img-responsive&quot;/&gt;&lt;/div&gt;&#xd;
+            &lt;div class=&quot;swiper-slide text-center&quot;&gt;&lt;img src=&quot;https://opencart.abstracta.us:443/image/cache/catalog/demo/manufacturer/sony-130x100.png&quot; alt=&quot;Sony&quot; class=&quot;img-responsive&quot;/&gt;&lt;/div&gt;&#xd;
+            &lt;div class=&quot;swiper-slide text-center&quot;&gt;&lt;img src=&quot;https://opencart.abstracta.us:443/image/cache/catalog/demo/manufacturer/cocacola-130x100.png&quot; alt=&quot;Coca Cola&quot; class=&quot;img-responsive&quot;/&gt;&lt;/div&gt;&#xd;
+            &lt;div class=&quot;swiper-slide text-center&quot;&gt;&lt;img src=&quot;https://opencart.abstracta.us:443/image/cache/catalog/demo/manufacturer/burgerking-130x100.png&quot; alt=&quot;Burger King&quot; class=&quot;img-responsive&quot;/&gt;&lt;/div&gt;&#xd;
+            &lt;div class=&quot;swiper-slide text-center&quot;&gt;&lt;img src=&quot;https://opencart.abstracta.us:443/image/cache/catalog/demo/manufacturer/canon-130x100.png&quot; alt=&quot;Canon&quot; class=&quot;img-responsive&quot;/&gt;&lt;/div&gt;&#xd;
+            &lt;div class=&quot;swiper-slide text-center&quot;&gt;&lt;img src=&quot;https://opencart.abstracta.us:443/image/cache/catalog/demo/manufacturer/harley-130x100.png&quot; alt=&quot;Harley Davidson&quot; class=&quot;img-responsive&quot;/&gt;&lt;/div&gt;&#xd;
+            &lt;div class=&quot;swiper-slide text-center&quot;&gt;&lt;img src=&quot;https://opencart.abstracta.us:443/image/cache/catalog/demo/manufacturer/dell-130x100.png&quot; alt=&quot;Dell&quot; class=&quot;img-responsive&quot;/&gt;&lt;/div&gt;&#xd;
+            &lt;div class=&quot;swiper-slide text-center&quot;&gt;&lt;img src=&quot;https://opencart.abstracta.us:443/image/cache/catalog/demo/manufacturer/disney-130x100.png&quot; alt=&quot;Disney&quot; class=&quot;img-responsive&quot;/&gt;&lt;/div&gt;&#xd;
+            &lt;div class=&quot;swiper-slide text-center&quot;&gt;&lt;img src=&quot;https://opencart.abstracta.us:443/image/cache/catalog/demo/manufacturer/starbucks-130x100.png&quot; alt=&quot;Starbucks&quot; class=&quot;img-responsive&quot;/&gt;&lt;/div&gt;&#xd;
+            &lt;div class=&quot;swiper-slide text-center&quot;&gt;&lt;img src=&quot;https://opencart.abstracta.us:443/image/cache/catalog/demo/manufacturer/nintendo-130x100.png&quot; alt=&quot;Nintendo&quot; class=&quot;img-responsive&quot;/&gt;&lt;/div&gt;&#xd;
+      &lt;/div&gt;&#xd;
+  &lt;/div&gt;&#xd;
+  &lt;div class=&quot;swiper-pagination carousel0&quot;&gt;&lt;/div&gt;&#xd;
+  &lt;div class=&quot;swiper-pager&quot;&gt;&#xd;
+    &lt;div class=&quot;swiper-button-next&quot;&gt;&lt;/div&gt;&#xd;
+    &lt;div class=&quot;swiper-button-prev&quot;&gt;&lt;/div&gt;&#xd;
+  &lt;/div&gt;&#xd;
+&lt;/div&gt;&#xd;
+&lt;script type=&quot;text/javascript&quot;&gt;$(&apos;#carousel0&apos;).swiper({mode:&apos;horizontal&apos;,slidesPerView:5,pagination:&apos;.carousel0&apos;,paginationClickable:true,nextButton:&apos;.swiper-button-next&apos;,prevButton:&apos;.swiper-button-prev&apos;,autoplay:2500,loop:true});&lt;/script&gt;&#xd;
+&lt;/div&gt;&#xd;
+    &lt;/div&gt;&#xd;
+&lt;/div&gt;&#xd;
+&lt;footer&gt;&#xd;
+  &lt;div class=&quot;container&quot;&gt;&#xd;
+    &lt;div class=&quot;row&quot;&gt;&#xd;
+            &lt;div class=&quot;col-sm-3&quot;&gt;&#xd;
+        &lt;h5&gt;Information&lt;/h5&gt;&#xd;
+        &lt;ul class=&quot;list-unstyled&quot;&gt;&#xd;
+                   &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=information/information&amp;amp;information_id=4&quot;&gt;About Us&lt;/a&gt;&lt;/li&gt;&#xd;
+                    &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=information/information&amp;amp;information_id=6&quot;&gt;Delivery Information&lt;/a&gt;&lt;/li&gt;&#xd;
+                    &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=information/information&amp;amp;information_id=3&quot;&gt;Privacy Policy&lt;/a&gt;&lt;/li&gt;&#xd;
+                    &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=information/information&amp;amp;information_id=5&quot;&gt;Terms &amp;amp; Conditions&lt;/a&gt;&lt;/li&gt;&#xd;
+                  &lt;/ul&gt;&#xd;
+      &lt;/div&gt;&#xd;
+            &lt;div class=&quot;col-sm-3&quot;&gt;&#xd;
+        &lt;h5&gt;Customer Service&lt;/h5&gt;&#xd;
+        &lt;ul class=&quot;list-unstyled&quot;&gt;&#xd;
+          &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=information/contact&quot;&gt;Contact Us&lt;/a&gt;&lt;/li&gt;&#xd;
+          &lt;li&gt;&lt;a href=&quot;https://opencart.abstracta.us:443/index.php?route=account/return/add&quot;&gt;Returns&lt;/a&gt;&lt;/li&gt;&#xd;
+          &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=information/sitemap&quot;&gt;Site Map&lt;/a&gt;&lt;/li&gt;&#xd;
+        &lt;/ul&gt;&#xd;
+      &lt;/div&gt;&#xd;
+      &lt;div class=&quot;col-sm-3&quot;&gt;&#xd;
+        &lt;h5&gt;Extras&lt;/h5&gt;&#xd;
+        &lt;ul class=&quot;list-unstyled&quot;&gt;&#xd;
+          &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/manufacturer&quot;&gt;Brands&lt;/a&gt;&lt;/li&gt;&#xd;
+          &lt;li&gt;&lt;a href=&quot;https://opencart.abstracta.us:443/index.php?route=account/voucher&quot;&gt;Gift Certificates&lt;/a&gt;&lt;/li&gt;&#xd;
+          &lt;li&gt;&lt;a href=&quot;https://opencart.abstracta.us:443/index.php?route=affiliate/login&quot;&gt;Affiliate&lt;/a&gt;&lt;/li&gt;&#xd;
+          &lt;li&gt;&lt;a href=&quot;http://opencart.abstracta.us:80/index.php?route=product/special&quot;&gt;Specials&lt;/a&gt;&lt;/li&gt;&#xd;
+        &lt;/ul&gt;&#xd;
+      &lt;/div&gt;&#xd;
+      &lt;div class=&quot;col-sm-3&quot;&gt;&#xd;
+        &lt;h5&gt;My Account&lt;/h5&gt;&#xd;
+        &lt;ul class=&quot;list-unstyled&quot;&gt;&#xd;
+          &lt;li&gt;&lt;a href=&quot;https://opencart.abstracta.us:443/index.php?route=account/account&quot;&gt;My Account&lt;/a&gt;&lt;/li&gt;&#xd;
+          &lt;li&gt;&lt;a href=&quot;https://opencart.abstracta.us:443/index.php?route=account/order&quot;&gt;Order History&lt;/a&gt;&lt;/li&gt;&#xd;
+          &lt;li&gt;&lt;a href=&quot;https://opencart.abstracta.us:443/index.php?route=account/wishlist&quot;&gt;Wish List&lt;/a&gt;&lt;/li&gt;&#xd;
+          &lt;li&gt;&lt;a href=&quot;https://opencart.abstracta.us:443/index.php?route=account/newsletter&quot;&gt;Newsletter&lt;/a&gt;&lt;/li&gt;&#xd;
+        &lt;/ul&gt;&#xd;
+      &lt;/div&gt;&#xd;
+    &lt;/div&gt;&#xd;
+    &lt;hr&gt;&#xd;
+    &lt;p&gt;Powered By &lt;a href=&quot;http://www.opencart.com&quot;&gt;OpenCart&lt;/a&gt;&lt;br/&gt; Your Store &amp;copy; 2022&lt;/p&gt;&#xd;
+  &lt;/div&gt;&#xd;
+&lt;/footer&gt;&#xd;
+&lt;!--&#xd;
+OpenCart is open source software and you are free to remove the powered by OpenCart if you want, but its generally accepted practise to make a small donation.&#xd;
+Please donate via PayPal to donate@opencart.com&#xd;
+//--&gt;&#xd;
+  &lt;div id=&quot;bitnami-banner&quot; data-banner-id=&quot;d32a9&quot;&gt;  &lt;style&gt;#bitnami-banner{z-index:100000;height:80px;padding:0;width:120px;background:transparent;position:fixed;right:0;bottom:0;border:0 solid #ededed}#bitnami-banner .bitnami-corner-image-div{position:fixed;right:0;bottom:0;border:0;z-index:100001;height:110px}#bitnami-banner .bitnami-corner-image-div .bitnami-corner-image{position:fixed;right:0;bottom:0;border:0;z-index:100001;height:110px}#bitnami-close-banner-button{height:12px;width:12px;z-index:10000000000;position:fixed;right:5px;bottom:65px;display:none;cursor:pointer}&lt;/style&gt;  &lt;img id=&quot;bitnami-close-banner-button&quot; src=&quot;/bitnami/images/close.png&quot;/&gt;  &lt;div class=&quot;bitnami-corner-image-div&quot;&gt;     &lt;a href=&quot;/bitnami/index.html&quot; target=&quot;_blank&quot;&gt;       &lt;img class=&quot;bitnami-corner-image&quot; alt=&quot;Bitnami&quot; src=&quot;/bitnami/images/corner-logo.png&quot;/&gt;     &lt;/a&gt;  &lt;/div&gt;  &lt;script type=&quot;text/javascript&quot; src=&quot;/bitnami/banner.js&quot;&gt;&lt;/script&gt; &lt;/div&gt;   &lt;/body&gt;&lt;/html&gt;</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">opencart.abstracta.us/</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path"></stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResultCollector guiclass="GraphVisualizer" testclass="ResultCollector" testname="Graph Results" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+          <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="estabilidad" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">6</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">opencart.abstracta.us/</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path"></stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+          <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
